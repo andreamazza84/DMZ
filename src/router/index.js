@@ -39,7 +39,7 @@ const router = new Router({
           component: () => import('@/views/portfolio/Index.vue'),
         },
         {
-          path: 'project/:id',
+          path: ':id',
           name: 'ProjectDetail',
           props: true,
           component: () => import('@/views/portfolio/Detail.vue'),

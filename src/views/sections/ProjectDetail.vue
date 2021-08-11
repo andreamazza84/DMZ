@@ -11,7 +11,7 @@
       <v-col
         cols="12"
       >
-        <v-img
+        <carousel
           :height="$vuetify.breakpoint.mdAndUp ? 'calc(100vh - 100px)' : 'calc(100vh - 60px)'"
           :src="activeProject.src"
         />
@@ -72,8 +72,12 @@
 </template>
 
 <script>
+  import Carousel from '@/components/base/Carousel.vue'
   export default {
     name: 'SectionProjectDetail',
+    components: {
+      Carousel,
+    },
     computed: {
       activeProject () {
         const id = this.$route.params.id

@@ -56,6 +56,7 @@ export default {
         projects: [
           {
             id: 1,
+            slug: 'ciao1',
             src: require('@/assets/projects/adrian-TvN54bnuQg8-unsplash.jpg'),
             title: 'Adrian',
             subtitle: 'Unsplash',
@@ -66,6 +67,7 @@ export default {
           },
           {
             id: 2,
+            slug: 'ciao2',
             src: require('@/assets/projects/aliaksei-lepik-8qTBHezzF8I-unsplash.jpg'),
             title: 'Aliaksei Lepik',
             subtitle: 'Unsplash',
@@ -76,6 +78,7 @@ export default {
           },
           {
             id: 3,
+            slug: 'ciao3',
             src: require('@/assets/projects/carlos-hevia-qhB6S2dts8A-unsplash.jpg'),
             title: 'Carlos Hevia',
             subtitle: 'Unsplash',
@@ -86,6 +89,7 @@ export default {
           },
           {
             id: 4,
+            slug: 'ciao4',
             src: require('@/assets/projects/cindy-chen-EP4VrAn-WaY-unsplash.jpg'),
             title: 'Cindy Chen',
             subtitle: 'Unsplash',
@@ -96,6 +100,7 @@ export default {
           },
           {
             id: 5,
+            slug: 'ciao5',
             src: require('@/assets/projects/everett-mcintire-BPCsppbNRMI-unsplash.jpg'),
             title: 'Everett Mcintire',
             subtitle: 'Unsplash',
@@ -106,6 +111,7 @@ export default {
           },
           {
             id: 6,
+            slug: 'ciao6',
             src: require('@/assets/projects/jamison-mcandie-waZEHLRP98s-unsplash.jpg'),
             title: 'Jamison Mcandie',
             subtitle: 'Unsplash',
@@ -116,6 +122,7 @@ export default {
           },
           {
             id: 7,
+            slug: 'ciao7',
             src: require('@/assets/projects/jerome-bertaux-tRkBF9Ujqw4-unsplash.jpg'),
             title: 'Jerome Bertaux',
             subtitle: 'Unsplash',
@@ -126,6 +133,7 @@ export default {
           },
           {
             id: 8,
+            slug: 'ciao8',
             src: require('@/assets/projects/kimson-doan-AZMmUy2qL6A-unsplash.jpg'),
             title: 'Kimson Doan',
             subtitle: 'Unsplash',
@@ -136,6 +144,7 @@ export default {
           },
           {
             id: 9,
+            slug: 'ciao9',
             src: require('@/assets/projects/kseniya-petukhova-_wj5Jd-AaK4-unsplash.jpg'),
             title: 'Kseniya Petukhova',
             subtitle: 'Unsplash',
@@ -146,6 +155,7 @@ export default {
           },
           {
             id: 10,
+            slug: 'ciao10',
             src: require('@/assets/projects/mike-erskine-S_VbdMTsdiA-unsplash.jpg'),
             title: 'Mike Erskine',
             subtitle: 'Unsplash',
@@ -156,6 +166,7 @@ export default {
           },
           {
             id: 11,
+            slug: 'ciao11',
             src: require('@/assets/projects/patrick-boucher-0ccc00jMW1U-unsplash.jpg'),
             title: 'Patrick Boucher',
             subtitle: 'Unsplash',
@@ -166,6 +177,7 @@ export default {
           },
           {
             id: 12,
+            slug: 'ciao12',
             src: require('@/assets/projects/robson-hatsukami-morgan-RTKaEcGKarQ-unsplash.jpg'),
             title: 'Robson Hatsukami Morgan',
             subtitle: 'Unsplash',
@@ -176,6 +188,7 @@ export default {
           },
           {
             id: 13,
+            slug: 'ciao13',
             src: require('@/assets/projects/sahin-yesilyaprak-V7uP-XzqX18-unsplash.jpg'),
             title: 'Sahin Yesilyaprak',
             subtitle: 'Unsplash',
@@ -186,6 +199,7 @@ export default {
           },
           {
             id: 14,
+            slug: 'ciao14',
             src: require('@/assets/projects/sayan-nath-MCfy9IZivT0-unsplash.jpg'),
             title: 'Sayan Nath',
             subtitle: 'Unsplash',
@@ -196,6 +210,7 @@ export default {
           },
           {
             id: 15,
+            slug: 'ciao15',
             src: require('@/assets/projects/thomas-aeschleman-BG8te7fVCqU-unsplash.jpg'),
             title: 'Thomas Aeschleman',
             subtitle: 'Unsplash',
@@ -205,7 +220,8 @@ export default {
             category: 'night',
           },
           {
-            id: 16,
+            id: 'ciao16',
+            slug: 'ciao16',
             src: require('@/assets/projects/twitter-praizist-PDNc3fFFrYk-unsplash.jpg'),
             title: '@praizist Twitter',
             subtitle: 'Unsplash',

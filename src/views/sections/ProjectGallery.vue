@@ -45,11 +45,11 @@
       return {
         selectedTab: 'all',
         tabs: [
-          { title: 'All Works', category: 'all' },
-          { title: 'Campfire', category: 'fire' },
-          { title: 'Mountain', category: 'mountain' },
-          { title: 'Daylight', category: 'day' },
-          { title: 'Overnight', category: 'night' },
+          { title: 'Tutti', category: 'all' },
+          { title: '2021', category: 'fire' },
+          { title: '2020', category: 'mountain' },
+          { title: '2019', category: 'day' },
+          { title: '2018', category: 'night' },
         ],
       }
     },
