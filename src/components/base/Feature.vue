@@ -17,7 +17,7 @@
         class="text-center flex-column"
       >
         <base-subheading
-          class="title primary--text mt-4"
+          class="text-h6 primary--text mt-4"
           align="center"
           :title="title"
         />

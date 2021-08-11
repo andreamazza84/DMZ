@@ -13,7 +13,7 @@
       min-height="120px"
       :src="require('@/assets/campfire.svg')"
     />
-    <v-toolbar-title class="headline">
+    <v-toolbar-title class="text-h5">
       <router-link
         :to="{ name: 'Home' }"
         tag="h4"

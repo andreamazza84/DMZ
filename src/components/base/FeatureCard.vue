@@ -18,7 +18,7 @@
       <v-row justify="center">
         <v-col cols="8">
           <span
-            class="title primary--text"
+            class="text-h6 primary--text"
             v-text="heading"
           />
         </v-col>
@@ -29,7 +29,7 @@
       >
         <v-col cols="12">
           <span
-            class="body-2"
+            class="text-body-2"
             v-text="body"
           />
         </v-col>

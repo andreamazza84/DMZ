@@ -15,7 +15,7 @@
         color="primary"
       />
       <base-body
-        class="text-uppercase headline"
+        class="text-uppercase text-h5"
         align="center"
         space="2"
         v-text="text"

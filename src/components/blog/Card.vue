@@ -14,7 +14,7 @@
       />
     </v-card-title>
     <v-card-text>
-      <div class="caption">
+      <div class="text-caption">
         <v-icon
           small
           v-text="'mdi-file-document-edit-outline'"

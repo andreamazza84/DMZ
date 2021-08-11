@@ -23,7 +23,7 @@
           "{{ customer.review }}"
         </p>
 
-        <h4 class="text-center headline text-uppercase">
+        <h4 class="text-center text-h5 text-uppercase">
           - {{ customer.name }}
         </h4>
 
