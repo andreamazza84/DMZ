@@ -7,7 +7,6 @@
       color="secondary"
     />
     <base-view />
-    <settings />
   </v-app>
 </template>
 
@@ -18,7 +17,7 @@
     components: {
       AppBar: () => import('@/layouts/base/AppBar'),
       // SystemBar: () => import('@/layouts/base/SystemBar'),
-      Settings: () => import('@/layouts/base/Settings'),
+      // Settings: () => import('@/layouts/base/Settings'),
       BaseView: () => import('@/layouts/base/View'),
     },
   }

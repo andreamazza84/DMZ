@@ -54,11 +54,11 @@ const router = new Router({
         //   name: 'Contact',
         //   component: () => import('@/views/contact/Index.vue'),
         // },
-        {
-          path: 'sink',
-          name: 'Sink',
-          component: () => import('@/views/sink/Index.vue'),
-        },
+        // {
+        //   path: 'sink',
+        //   name: 'Sink',
+        //   component: () => import('@/views/sink/Index.vue'),
+        // },
         {
           path: '*',
           name: 'NotFound',

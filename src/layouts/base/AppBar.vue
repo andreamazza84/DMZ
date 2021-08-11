@@ -16,7 +16,7 @@
     /> -->
     <v-toolbar-title class="text-h5">
       <router-link
-        :to="{ name: 'Home' }"
+        :to="{ name: 'Portfolio' }"
         tag="h4"
         style="cursor: pointer"
         v-text="appData.title"
