@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <system-bar v-if="$vuetify.breakpoint.mdAndUp" />
+    <!-- <system-bar v-if="$vuetify.breakpoint.mdAndUp" /> -->
     <app-bar
       block
       search
@@ -16,7 +16,7 @@
 
     components: {
       AppBar: () => import('@/layouts/base/AppBar'),
-      SystemBar: () => import('@/layouts/base/SystemBar'),
+      // SystemBar: () => import('@/layouts/base/SystemBar'),
       Settings: () => import('@/layouts/base/Settings'),
       BaseView: () => import('@/layouts/base/View'),
     },

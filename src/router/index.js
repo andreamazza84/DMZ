@@ -18,11 +18,11 @@ const router = new Router({
       path: '/',
       component: () => import('@/layouts/base/Index.vue'),
       children: [
-        {
-          path: '',
-          name: 'Home',
-          component: () => import('@/views/home/Index.vue'),
-        },
+        // {
+        //   path: '',
+        //   name: 'Home',
+        //   component: () => import('@/views/home/Index.vue'),
+        // },
         // {
         //   path: 'about',
         //   name: 'About',
@@ -34,7 +34,7 @@ const router = new Router({
         //   component: () => import('@/views/services/Index.vue'),
         // },
         {
-          path: 'portfolio',
+          path: '',
           name: 'Portfolio',
           component: () => import('@/views/portfolio/Index.vue'),
         },

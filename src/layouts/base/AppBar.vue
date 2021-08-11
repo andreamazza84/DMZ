@@ -91,8 +91,8 @@
       return {
         drawer: false,
         items: [
-          { name: 'Home', icon: 'mdi-home' },
-          { name: 'Portfolio', icon: 'mdi-book' },
+          // { name: 'Home', icon: 'mdi-home' },
+          // { name: 'Portfolio', icon: 'mdi-book' },
         ],
       }
     },

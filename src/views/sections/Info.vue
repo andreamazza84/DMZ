@@ -8,7 +8,7 @@
         justify="center"
       >
         <v-col
-          cols="12"
+          cols="3"
           md="3"
           class="px-3"
         >
@@ -20,7 +20,7 @@
           <base-body text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget metus varius, malesuada nulla sed, ultrices est. Proin sed nisl tortor. Sed ex mi, volutpat et lobortis sit amet, fringilla at leo." />
           <base-body text="Proin sed nisl tortor. Sed ex mi, volutpat et lobortis sit amet, fringilla at leo." />
         </v-col>
-        <v-col
+        <!-- <v-col
           v-if="$vuetify.breakpoint.mdAndUp"
           cols="3"
           class="px-3"
@@ -40,8 +40,8 @@
             />
             <v-divider :key="`news-divider-${i}`" />
           </template>
-        </v-col>
-        <v-col
+        </v-col> -->
+        <!-- <v-col
           v-if="$vuetify.breakpoint.mdAndUp"
           cols="3"
           class="px-3"
@@ -85,7 +85,7 @@
               max-width="100%"
             />
           </template>
-        </v-col>
+        </v-col> -->
         <v-col
           cols="12"
           md="3"
@@ -120,6 +120,13 @@
             space="2"
             text="@twitter"
           />
+          
+        </v-col>
+        <v-col
+          cols="12"
+          md="3"
+          class="px-3"
+        > 
           <base-subheading title="Follow Us" />
           <base-divider
             color="white"
