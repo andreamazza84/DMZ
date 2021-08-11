@@ -2,7 +2,7 @@
   <v-system-bar
     app
     dark
-    color="primary"
+    color="secondary"
     height="60px"
     style="z-index: 5;"
   >

@@ -4,6 +4,7 @@
     <app-bar
       block
       search
+      color="secondary"
     />
     <base-view />
     <settings />

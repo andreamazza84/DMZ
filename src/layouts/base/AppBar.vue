@@ -4,15 +4,16 @@
     elevate-on-scroll
     style="right: 0"
     :color="color || 'white'"
-    :height="$vuetify.breakpoint.mdAndUp ? '150px' : '60px'"
+    :height="$vuetify.breakpoint.mdAndUp ? '100px' : '60px'"
+    class="px-12"
   >
-    <v-img
+    <!-- <v-img
       class="hidden-sm-and-down"
       :max-width="$vuetify.breakpoint.mdAndUp ? '200px' : '100px'"
       max-height="120px"
       min-height="120px"
       :src="require('@/assets/campfire.svg')"
-    />
+    /> -->
     <v-toolbar-title class="text-h5">
       <router-link
         :to="{ name: 'Home' }"

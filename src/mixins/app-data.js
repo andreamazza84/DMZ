@@ -2,13 +2,13 @@ export default {
   computed: {
     appData () {
       return {
-        title: 'Flairo',
+        title: 'Davide Mancini Zanchi',
         socialLinks: [
           { name: 'Facebook', icon: 'mdi-facebook', link: 'https://facebook.com', color: '#0F98F6' },
           { name: 'Instagram', icon: 'mdi-instagram', link: 'https://instagram.com', color: '#EF0075' },
-          { name: 'Twitter', icon: 'mdi-twitter', link: 'https://twitter.com', color: '#1A91DA' },
-          { name: 'Soundcloud', icon: 'mdi-soundcloud', link: 'https://soundcloud.com', color: '#FF5501' },
-          { name: 'Twitch', icon: 'mdi-twitch', link: 'https://twitch.tv', color: '#9147FF' },
+          // { name: 'Twitter', icon: 'mdi-twitter', link: 'https://twitter.com', color: '#1A91DA' },
+          // { name: 'Soundcloud', icon: 'mdi-soundcloud', link: 'https://soundcloud.com', color: '#FF5501' },
+          // { name: 'Twitch', icon: 'mdi-twitch', link: 'https://twitch.tv', color: '#9147FF' },
           { name: 'Youtube', icon: 'mdi-youtube', link: 'https://youtube.com', color: '#FE0200' },
           { name: 'LinkedIn', icon: 'mdi-linkedin', link: 'https://linkedin.com', color: '#0077B5' },
         ],

@@ -1,7 +1,6 @@
 <template>
   <base-section
     id="story-alt"
-    class="grey lighten-4 pb-12"
     space="0"
   >
     <v-row
@@ -11,18 +10,14 @@
     >
       <v-col
         cols="12"
-        md="6"
       >
         <v-img
-          class="ma-1"
-          min-height="500px"
-          min-width="50%"
+          :height="$vuetify.breakpoint.mdAndUp ? 'calc(100vh - 100px)' : 'calc(100vh - 60px)'"
           :src="activeProject.src"
         />
       </v-col>
       <v-col
         cols="12"
-        md="6"
         class="px-5 py-2"
       >
         <base-heading
