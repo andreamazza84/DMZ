@@ -29,6 +29,8 @@
     >
       <v-img
         :src="src"
+        height="100%"
+        contain
       />
     </v-carousel-item>
   </v-carousel>
@@ -66,7 +68,8 @@
       }
     },
     mounted () {
-      // console.log(this.src)
+      console.log(this.src)
+      // console.log(this.$route)
     },
   }
 </script>

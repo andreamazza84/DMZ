@@ -23,7 +23,8 @@
       />
     </v-toolbar-title>
     <v-spacer />
-    <div v-if="$vuetify.breakpoint.mdAndUp">
+    <!-- <div v-if="$vuetify.breakpoint.mdAndUp"> -->
+    <div>
       <v-tabs
         hide-slider
         optional
@@ -51,7 +52,7 @@
         </v-tab>
       </v-tabs>
     </div>
-    <div v-else>
+    <!-- <div v-else>
       <v-btn
         icon
         @click="drawer = true"
@@ -69,7 +70,7 @@
         :value="drawer"
         @input="drawer = $event"
       />
-    </div>
+    </div> -->
   </v-app-bar>
 </template>
 
@@ -78,8 +79,8 @@
     name: 'BaseAppBar',
 
     components: {
-      BlogSidebar: () => import('@/layouts/base/BlogSidebar'),
-      BaseSidebar: () => import('@/layouts/base/BaseSidebar'),
+      // BlogSidebar: () => import('@/layouts/base/BlogSidebar'),
+      // BaseSidebar: () => import('@/layouts/base/BaseSidebar'),
     },
 
     props: {
