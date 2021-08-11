@@ -44,7 +44,7 @@
         required: true,
       },
       src: {
-        type: String,
+        type: String || Object,
         required: true,
       },
     },
@@ -66,10 +66,6 @@
         ],
 
       }
-    },
-    mounted () {
-      console.log(this.src)
-      // console.log(this.$route)
     },
   }
 </script>

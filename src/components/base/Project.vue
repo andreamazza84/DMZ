@@ -11,7 +11,7 @@
         min-height="300"
         max-height="300"
         fill
-        :src="src"
+        :src="src[0]"
       >
         <v-fade-transition>
           <div
@@ -65,7 +65,7 @@
       },
       subtitle: String,
       src: {
-        type: String,
+        type: String || Object,
         required: true,
       },
     },
