@@ -23,16 +23,16 @@ const router = new Router({
           name: 'Home',
           component: () => import('@/views/home/Index.vue'),
         },
-        {
-          path: 'about',
-          name: 'About',
-          component: () => import('@/views/about/Index.vue'),
-        },
-        {
-          path: 'services',
-          name: 'Services',
-          component: () => import('@/views/services/Index.vue'),
-        },
+        // {
+        //   path: 'about',
+        //   name: 'About',
+        //   component: () => import('@/views/about/Index.vue'),
+        // },
+        // {
+        //   path: 'services',
+        //   name: 'Services',
+        //   component: () => import('@/views/services/Index.vue'),
+        // },
         {
           path: 'portfolio',
           name: 'Portfolio',
@@ -44,16 +44,16 @@ const router = new Router({
           props: true,
           component: () => import('@/views/portfolio/Detail.vue'),
         },
-        {
-          path: 'blog',
-          name: 'Blog',
-          component: () => import('@/views/blog/Index.vue'),
-        },
-        {
-          path: 'contact',
-          name: 'Contact',
-          component: () => import('@/views/contact/Index.vue'),
-        },
+        // {
+        //   path: 'blog',
+        //   name: 'Blog',
+        //   component: () => import('@/views/blog/Index.vue'),
+        // },
+        // {
+        //   path: 'contact',
+        //   name: 'Contact',
+        //   component: () => import('@/views/contact/Index.vue'),
+        // },
         {
           path: 'sink',
           name: 'Sink',

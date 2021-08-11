@@ -92,11 +92,7 @@
         drawer: false,
         items: [
           { name: 'Home', icon: 'mdi-home' },
-          { name: 'About', icon: 'mdi-account-group' },
-          { name: 'Services', icon: 'mdi-book-open-variant' },
           { name: 'Portfolio', icon: 'mdi-book' },
-          { name: 'Blog', icon: 'mdi-web' },
-          { name: 'Contact', icon: 'mdi-phone' },
         ],
       }
     },
