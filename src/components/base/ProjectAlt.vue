@@ -12,7 +12,7 @@
         min-height="300"
         max-height="300"
         fill
-        :src="src[0]"
+        :src="src"
       >
         <v-fade-transition>
           <div
@@ -24,29 +24,7 @@
               class="flex-column"
               justify="center"
               align="center"
-            >
-              <v-btn
-                :to="{ name: 'ProjectDetail', params: { id } }"
-                class="mx-2 mb-2"
-                icon
-                dark
-                x-large
-              >
-                <v-icon
-                  class="mx-0"
-                  x-large
-                  v-text="'mdi-link'"
-                />
-              </v-btn>
-              <div
-                class="font-weight-black mb-2 text-left"
-                v-text="title"
-              />
-              <div
-                class="mb-2 text-left"
-                v-text="subtitle"
-              />
-            </v-row>
+            />
           </div>
         </v-fade-transition>
       </v-img>
@@ -56,17 +34,12 @@
 
 <script>
   export default {
-    name: 'BaseProject',
+    name: 'BaseProjectAlt',
 
     props: {
       id: [String, Number],
-      title: {
-        type: String,
-        required: true,
-      },
-      subtitle: String,
       src: {
-        type: Object,
+        type: String,
         required: true,
       },
     },
