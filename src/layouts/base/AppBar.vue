@@ -14,7 +14,7 @@
       min-height="120px"
       :src="require('@/assets/campfire.svg')"
     /> -->
-    <v-toolbar-title class="text-h5">
+    <v-toolbar-title class="text-h5 title-effect">
       <router-link
         :to="{ name: 'Portfolio' }"
         tag="h4"
@@ -114,3 +114,14 @@
     },
   }
 </script>
+<style lang="scss" scoped>
+// @import '../../styles/variables.scss';
+  .title-effect{
+    &{
+      transition: all 300ms;
+    }
+    &:hover{
+      color: #6c99d1;
+    }
+  }
+</style>

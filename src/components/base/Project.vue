@@ -1,4 +1,5 @@
 <template>
+  <!-- Singola immagine della galleria -->
   <v-hover #default="{ hover }">
     <v-card
       max-height="400"
@@ -65,7 +66,7 @@
       },
       subtitle: String,
       src: {
-        type: String || Object,
+        // type: Object,
         required: true,
       },
     },

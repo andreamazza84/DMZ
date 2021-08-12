@@ -46,10 +46,10 @@
         selectedTab: 'all',
         tabs: [
           { title: 'Tutti', category: 'all' },
-          { title: '2021', category: 'fire' },
-          { title: '2020', category: 'mountain' },
-          { title: '2019', category: 'day' },
-          { title: '2018', category: 'night' },
+          { title: '2021', category: '2021' },
+          { title: '2020', category: '2020' },
+          { title: '2019', category: '2019' },
+          { title: '2018', category: '2018' },
         ],
       }
     },

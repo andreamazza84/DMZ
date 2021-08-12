@@ -8,27 +8,29 @@
     <template v-slot:prev="{ on, attrs }">
       <v-btn
         color="primary"
+        fab
         v-bind="attrs"
         v-on="on"
       >
-        Precedente
+        <v-icon>mdi-chevron-left</v-icon>
       </v-btn>
     </template>
     <template v-slot:next="{ on, attrs }">
       <v-btn
         color="primary"
+        fab
         v-bind="attrs"
         v-on="on"
       >
-        Successiva
+        <v-icon>mdi-chevron-right</v-icon>
       </v-btn>
     </template>
     <v-carousel-item
-      v-for="(slide, i) in slides"
+      v-for="(item, i) in src"
       :key="i"
     >
       <v-img
-        :src="src"
+        :src="item"
         height="100%"
         contain
       />
@@ -44,28 +46,9 @@
         required: true,
       },
       src: {
-        type: String || Object,
+        type: Object,
         required: true,
       },
-    },
-    data () {
-      return {
-        colors: [
-          'indigo',
-          'warning',
-          'pink darken-2',
-          'red lighten-1',
-          'deep-purple accent-4',
-        ],
-        slides: [
-          'First',
-          'Second',
-          'Third',
-          'Fourth',
-          'Fifth',
-        ],
-
-      }
     },
   }
 </script>

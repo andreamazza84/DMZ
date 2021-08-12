@@ -21,7 +21,7 @@
         class="px-5 py-2"
       >
         <base-heading
-          class="font-weight-bold"
+          class="font-weight-bold mt-4"
           :title="activeProject.title"
           align="left"
         />
@@ -55,7 +55,7 @@
           />
         </template>
         <div />
-        <base-btn
+        <!-- <base-btn
           class="mt-10 elevation-0 mx-1"
           color="black"
           dark
@@ -65,7 +65,7 @@
             class="font-weight-black text-none"
             v-text="'Order Work'"
           />
-        </base-btn>
+        </base-btn> -->
       </v-col>
     </v-row>
   </base-section>

@@ -1,18 +1,4 @@
 export default {
-
-  mounted () {
-    // function mapFiles (context) {
-    //     const keys = context.keys()
-    //     const values = keys.map(context)
-    //     return keys.reduce((accumulator, key, index) => ({
-    //       ...accumulator,
-    //       [key]: values[index],
-    //     }), {})
-    //   }
-
-      // const images = this.mapFiles(require.context('@/assets/projects/folder/', true, /\.(png|gif|ico|jpg|jpeg)$/))
-      // console.log(this.appData.projects[16].src)
-  },
   methods: {
     mapFiles: function (context) {
       const keys = context.keys()
@@ -30,11 +16,11 @@ export default {
         socialLinks: [
           { name: 'Facebook', icon: 'mdi-facebook', link: 'https://facebook.com', color: '#0F98F6' },
           { name: 'Instagram', icon: 'mdi-instagram', link: 'https://instagram.com', color: '#EF0075' },
+          { name: 'Youtube', icon: 'mdi-youtube', link: 'https://youtube.com', color: '#FE0200' },
+          { name: 'LinkedIn', icon: 'mdi-linkedin', link: 'https://linkedin.com', color: '#0077B5' },
           // { name: 'Twitter', icon: 'mdi-twitter', link: 'https://twitter.com', color: '#1A91DA' },
           // { name: 'Soundcloud', icon: 'mdi-soundcloud', link: 'https://soundcloud.com', color: '#FF5501' },
           // { name: 'Twitch', icon: 'mdi-twitch', link: 'https://twitch.tv', color: '#9147FF' },
-          { name: 'Youtube', icon: 'mdi-youtube', link: 'https://youtube.com', color: '#FE0200' },
-          { name: 'LinkedIn', icon: 'mdi-linkedin', link: 'https://linkedin.com', color: '#0077B5' },
         ],
         contact: {
           phone: { value: '+1 555 555-5555', icon: 'mdi-phone' },
@@ -257,13 +243,46 @@ export default {
           {
             id: 17,
             slug: 'ciao16',
-            src: this.mapFiles(require.context('@/assets/projects/folder-all/', true, /\.(png|gif|ico|jpg|jpeg)$/)),
+            src: this.mapFiles(require.context('@/assets/projects/folder-00/', true, /\.(png|gif|ico|jpg|jpeg)$/)),
             title: '@praizist Twitter',
             subtitle: 'Unsplash',
             date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
             description: 'Duis fringilla mauris ac pellentesque suscipit. Vestibulum in feugiat felis. Cras eget mattis lectus, sit amet ultricies leo. Donec imperdiet diam eu lectus scelerisque accumsan. Quisque sollicitudin, diam non eleifend tempor, tortor tortor pulvinar enim, sit amet maximus neque metus ac nulla. Morbi pellentesque leo ut nulla scelerisque pulvinar. In hac habitasse platea dictumst. Donec scelerisque ante ante, vel tempor dolor auctor ut. Sed et luctus leo, eu egestas sapien. In semper commodo urna, id lacinia mi pretium eu. Suspendisse ornare blandit ligula id fermentum. Nulla lobortis, ligula quis consequat elementum, elit odio fringilla ligula, commodo tristique leo elit ac ex. Vestibulum semper sagittis odio sed aliquam. Pellentesque at turpis vel augue scelerisque malesuada at sit amet augue.',
             tags: ['tag', 'tag', 'tag'],
-            category: 'day',
+            category: '2019',
+          },
+          {
+            id: 18,
+            slug: 'ciao16',
+            src: this.mapFiles(require.context('@/assets/projects/folder-01/', true, /\.(png|gif|ico|jpg|jpeg)$/)),
+            title: '@praizist Twitter',
+            subtitle: 'Unsplash',
+            date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
+            description: 'Duis fringilla mauris ac pellentesque suscipit. Vestibulum in feugiat felis. Cras eget mattis lectus, sit amet ultricies leo. Donec imperdiet diam eu lectus scelerisque accumsan. Quisque sollicitudin, diam non eleifend tempor, tortor tortor pulvinar enim, sit amet maximus neque metus ac nulla. Morbi pellentesque leo ut nulla scelerisque pulvinar. In hac habitasse platea dictumst. Donec scelerisque ante ante, vel tempor dolor auctor ut. Sed et luctus leo, eu egestas sapien. In semper commodo urna, id lacinia mi pretium eu. Suspendisse ornare blandit ligula id fermentum. Nulla lobortis, ligula quis consequat elementum, elit odio fringilla ligula, commodo tristique leo elit ac ex. Vestibulum semper sagittis odio sed aliquam. Pellentesque at turpis vel augue scelerisque malesuada at sit amet augue.',
+            tags: ['tag', 'tag', 'tag'],
+            category: '2020',
+          },
+          {
+            id: 19,
+            slug: 'ciao16',
+            src: this.mapFiles(require.context('@/assets/projects/folder-02/', true, /\.(png|gif|ico|jpg|jpeg)$/)),
+            title: '@praizist Twitter',
+            subtitle: 'Unsplash',
+            date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
+            description: 'Duis fringilla mauris ac pellentesque suscipit. Vestibulum in feugiat felis. Cras eget mattis lectus, sit amet ultricies leo. Donec imperdiet diam eu lectus scelerisque accumsan. Quisque sollicitudin, diam non eleifend tempor, tortor tortor pulvinar enim, sit amet maximus neque metus ac nulla. Morbi pellentesque leo ut nulla scelerisque pulvinar. In hac habitasse platea dictumst. Donec scelerisque ante ante, vel tempor dolor auctor ut. Sed et luctus leo, eu egestas sapien. In semper commodo urna, id lacinia mi pretium eu. Suspendisse ornare blandit ligula id fermentum. Nulla lobortis, ligula quis consequat elementum, elit odio fringilla ligula, commodo tristique leo elit ac ex. Vestibulum semper sagittis odio sed aliquam. Pellentesque at turpis vel augue scelerisque malesuada at sit amet augue.',
+            tags: ['tag', 'tag', 'tag'],
+            category: '2021',
+          },
+          {
+            id: 20,
+            slug: 'ciao16',
+            src: this.mapFiles(require.context('@/assets/projects/folder-03/', true, /\.(png|gif|ico|jpg|jpeg)$/)),
+            title: '@praizist Twitter',
+            subtitle: 'Unsplash',
+            date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
+            description: 'Duis fringilla mauris ac pellentesque suscipit. Vestibulum in feugiat felis. Cras eget mattis lectus, sit amet ultricies leo. Donec imperdiet diam eu lectus scelerisque accumsan. Quisque sollicitudin, diam non eleifend tempor, tortor tortor pulvinar enim, sit amet maximus neque metus ac nulla. Morbi pellentesque leo ut nulla scelerisque pulvinar. In hac habitasse platea dictumst. Donec scelerisque ante ante, vel tempor dolor auctor ut. Sed et luctus leo, eu egestas sapien. In semper commodo urna, id lacinia mi pretium eu. Suspendisse ornare blandit ligula id fermentum. Nulla lobortis, ligula quis consequat elementum, elit odio fringilla ligula, commodo tristique leo elit ac ex. Vestibulum semper sagittis odio sed aliquam. Pellentesque at turpis vel augue scelerisque malesuada at sit amet augue.',
+            tags: ['tag', 'tag', 'tag'],
+            category: '2021',
           },
         ],
         instagramPosts: [
