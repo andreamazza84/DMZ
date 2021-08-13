@@ -4,6 +4,7 @@
     space="0"
   >
     <v-row
+      v-if="wideScreen"
       align="center"
       justify="center"
       no-gutters
@@ -130,6 +131,9 @@
         // }
         // console.log(gallery.slice(0, sizeMap[breakpoint]))
         return gallery // .slice(0, sizeMap[breakpoint])
+      },
+      wideScreen () {
+        return this.$vuetify.breakpoint.name !== 'xs'
       },
     },
     mounted () {

@@ -15,27 +15,27 @@ export default new Vuex.Store({
     increment (state) {
       if (state.count < state.length - 1) {
         ++state.count
-        console.log('qui', state.count)
+        // console.log('qui', state.count)
       } else {
         state.count = 0
-        console.log('qua', state.count)
+        // console.log('qua', state.count)
       }
     },
     decrement (state) {
       if (state.count > 0) {
         state.count--
-        console.log('qui', state.count)
+        // console.log('qui', state.count)
       } else {
         state.count = state.length - 1
-        console.log('qua', state.count)
+        // console.log('qua', state.count)
       }
     },
     setArrayLength (state, length) {
-      console.log('length', length)
+      // console.log('length', length)
       state.length = length
     },
     setCounter (state, index) {
-      console.log('index', index)
+      // console.log('index', index)
       state.count = index
     },
   },
