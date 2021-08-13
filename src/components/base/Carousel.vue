@@ -33,10 +33,9 @@
       :key="i"
     >
       <v-img
-        :src="item"
+        :src="src[count]"
         height="100%"
         contain
-        @active="log(i)"
       />
     </v-carousel-item>
   </v-carousel>
@@ -52,6 +51,11 @@
       src: {
         type: Array,
         required: true,
+      },
+    },
+    computed: {
+      count: function () {
+        return this.$store.state.count
       },
     },
     methods: {

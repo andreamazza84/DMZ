@@ -14,6 +14,7 @@
         fill
         :src="src"
         :style="active ? 'border: 2px solid #6c99d1' : 'border: 2px solid transparent'"
+        class="pointer"
         @click="setSlide(index)"
       >
         <v-fade-transition>
@@ -62,5 +63,7 @@
 </script>
 
 <style lang="scss" scoped>
-
+  .pointer{
+    cursor: pointer
+  }
 </style>
