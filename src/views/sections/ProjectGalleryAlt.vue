@@ -17,7 +17,7 @@
       align="center"
       no-gutters
     >
-      <template v-for="(project, i) in activeProject.src">
+      <template v-for="(project, i) in activeProject">
         <v-col
           :key="i"
           cols="12"
@@ -33,7 +33,7 @@
       </template>
     </v-row>
     <!-- Shuffle Projects -->
-    <v-row
+    <!-- <v-row
       justify="center"
       align="center"
       no-gutters
@@ -52,7 +52,7 @@
           />
         </v-col>
       </template>
-    </v-row>
+    </v-row> -->
   </base-section>
 </template>
 
@@ -63,10 +63,12 @@
       activeProject () {
         const id = this.$route.params.id
         const activeProject = this.appData.projects.find(prj => +prj.id === +id)
-        // console.log(activeProject)
-        let ciao = [activeProject.src]
-        ciao = ciao.slice()
-        console.log('ciao', ciao)
+        let activeGallery = []
+        for (const i in activeProject.src) {
+          activeGallery.push(activeProject.src[i])
+        }
+        // console.log('activeGallery', activeGallery)
+        activeGallery = activeGallery.slice()
         const breakpoint = this.$vuetify.breakpoint.name
         const sizeMap = {
           xs: 3,
@@ -75,8 +77,8 @@
           lg: 4,
           xl: 4,
         }
-        console.log(ciao.slice(0, sizeMap[breakpoint]))
-        return activeProject
+        // console.log(activeGallery.slice(0, sizeMap[breakpoint]))
+        return activeGallery.slice(0, sizeMap[breakpoint])
       },
       shuffledProjects () {
         // console.log(this.appData.projects.slice())
