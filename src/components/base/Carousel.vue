@@ -6,23 +6,19 @@
     show-arrows-on-hover
     hide-delimiters
   >
-    <template v-slot:prev="{ on, attrs }">
+    <template v-slot:prev>
       <v-btn
         color="primary"
         fab
-        v-bind="attrs"
-        v-on="on"
         @click="prev()"
       >
         <v-icon>mdi-chevron-left</v-icon>
       </v-btn>
     </template>
-    <template v-slot:next="{ on, attrs }">
+    <template v-slot:next>
       <v-btn
         color="primary"
         fab
-        v-bind="attrs"
-        v-on="on"
         @click="next()"
       >
         <v-icon>mdi-chevron-right</v-icon>
