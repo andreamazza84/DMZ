@@ -13,15 +13,15 @@
         max-height="300"
         fill
         :src="src"
-        :style="active ? 'border: 2px solid #6c99d1' : 'border: 2px solid transparent'"
-        class="pointer"
+        :class="active && wideScreen ? 'blueBorder' : ''"
+        class="default"
         @click="setSlide(index)"
       >
         <v-fade-transition>
           <div
-            v-if="hover"
+            v-if="hover && wideScreen"
             class="d-flex transition-fast-in-fast-out v-card--reveal primary"
-            style="height: 100%; opacity: .8"
+            style="height: 100%; opacity: .5"
           >
             <v-row
               class="flex-column"
@@ -54,6 +54,11 @@
         required: true,
       },
     },
+    computed: {
+      wideScreen () {
+        return this.$vuetify.breakpoint.name !== 'xs'
+      },
+    },
     methods: {
       setSlide (index) {
         this.$store.dispatch('setCounter', index)
@@ -63,7 +68,12 @@
 </script>
 
 <style lang="scss" scoped>
-  .pointer{
-    cursor: pointer
+  .default{
+    cursor: pointer;
+    border: 2px solid #1e1e1e;
+  }
+  .blueBorder{
+    border: 2px solid #6c99d1;
+    transition: all 300ms;
   }
 </style>

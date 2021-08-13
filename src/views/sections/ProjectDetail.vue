@@ -19,7 +19,7 @@
       </v-col>
     </v-row>
     <v-row
-      justify="center"
+      justify="start"
       align="center"
       no-gutters
     >
