@@ -13,6 +13,7 @@
         max-height="300"
         fill
         :src="src"
+        :style="active ? 'border: 2px solid #6c99d1' : 'border: 2px solid transparent'"
       >
         <v-fade-transition>
           <div
@@ -42,6 +43,14 @@
         type: String,
         required: true,
       },
+      active: {
+        type: Boolean,
+        required: false,
+      },
+    },
+    mounted () {
+      console.log(this.active)
+      console.log('store', this.$store.state.count)
     },
   }
 </script>

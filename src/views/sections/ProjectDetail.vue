@@ -16,6 +16,33 @@
           :src="activeProject.src"
         />
       </v-col>
+    </v-row>
+    <v-row
+      justify="center"
+      align="center"
+      no-gutters
+    >
+      <template v-for="(project, i) in gallery">
+        <v-col
+          :key="i"
+          cols="12"
+          sm="6"
+          md="4"
+          lg="3"
+        >
+          <base-project-alt
+            class="my-2 mx-1"
+            :src="project"
+            :active="$emit.change"
+          />
+        </v-col>
+      </template>
+    </v-row>
+    <v-row
+      align="center"
+      justify="center"
+      no-gutters
+    >
       <v-col
         cols="12"
         class="px-5 py-2"
@@ -82,6 +109,26 @@
       activeProject () {
         const id = this.$route.params.id
         return this.appData.projects.find(prj => +prj.id === +id)
+      },
+      gallery () {
+        const id = this.$route.params.id
+        const proj = this.appData.projects.find(prj => +prj.id === +id)
+        let gallery = []
+        for (const i in proj.src) {
+          gallery.push(proj.src[i])
+        }
+        // console.log('gallery', gallery)
+        gallery = gallery.slice()
+        const breakpoint = this.$vuetify.breakpoint.name
+        const sizeMap = {
+          xs: 3,
+          sm: 2,
+          md: 3,
+          lg: 4,
+          xl: 4,
+        }
+        // console.log(gallery.slice(0, sizeMap[breakpoint]))
+        return gallery.slice(0, sizeMap[breakpoint])
       },
     },
   }

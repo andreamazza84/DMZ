@@ -4,15 +4,7 @@
     space="0"
   >
     <!-- Related Images  -->
-    <!-- <v-row>
-      <v-col
-        cols="12"
-        class="px-5 py-2"
-      >
-        <base-heading title="Galleria" />
-      </v-col>
-    </v-row> -->
-    <v-row
+    <!-- <v-row
       justify="center"
       align="center"
       no-gutters
@@ -31,7 +23,7 @@
           />
         </v-col>
       </template>
-    </v-row>
+    </v-row> -->
     <!-- Shuffle Projects -->
     <!-- <v-row
       justify="center"
@@ -62,13 +54,13 @@
     computed: {
       activeProject () {
         const id = this.$route.params.id
-        const activeProject = this.appData.projects.find(prj => +prj.id === +id)
-        let activeGallery = []
-        for (const i in activeProject.src) {
-          activeGallery.push(activeProject.src[i])
+        const proj = this.appData.projects.find(prj => +prj.id === +id)
+        let gallery = []
+        for (const i in proj.src) {
+          gallery.push(proj.src[i])
         }
-        // console.log('activeGallery', activeGallery)
-        activeGallery = activeGallery.slice()
+        // console.log('gallery', gallery)
+        gallery = gallery.slice()
         const breakpoint = this.$vuetify.breakpoint.name
         const sizeMap = {
           xs: 3,
@@ -77,8 +69,8 @@
           lg: 4,
           xl: 4,
         }
-        // console.log(activeGallery.slice(0, sizeMap[breakpoint]))
-        return activeGallery.slice(0, sizeMap[breakpoint])
+        // console.log(gallery.slice(0, sizeMap[breakpoint]))
+        return gallery.slice(0, sizeMap[breakpoint])
       },
       shuffledProjects () {
         // console.log(this.appData.projects.slice())
