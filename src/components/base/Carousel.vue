@@ -4,6 +4,7 @@
     :height="height"
     hide-delimiter-background
     show-arrows-on-hover
+    hide-delimiters
   >
     <template v-slot:prev="{ on, attrs }">
       <v-btn
@@ -11,6 +12,7 @@
         fab
         v-bind="attrs"
         v-on="on"
+        @click="prev()"
       >
         <v-icon>mdi-chevron-left</v-icon>
       </v-btn>
@@ -21,6 +23,7 @@
         fab
         v-bind="attrs"
         v-on="on"
+        @click="next()"
       >
         <v-icon>mdi-chevron-right</v-icon>
       </v-btn>
@@ -33,6 +36,7 @@
         :src="item"
         height="100%"
         contain
+        @active="log(i)"
       />
     </v-carousel-item>
   </v-carousel>
@@ -46,8 +50,19 @@
         required: true,
       },
       src: {
-        type: Object,
+        type: Array,
         required: true,
+      },
+    },
+    methods: {
+      prev: function () {
+        return this.$store.dispatch('previous')
+      },
+      next: function () {
+        return this.$store.dispatch('next')
+      },
+      log: function (element) {
+        console.log('element', element)
       },
     },
   }

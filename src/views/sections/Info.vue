@@ -38,12 +38,12 @@
             align="left"
           />
           <base-subtitle
-            title="Phone:"
+            title="Telefono:"
             weight="bold"
           />
           <base-body
             space="2"
-            text="(555) 555-5555"
+            :text="`${appData.contact.phone.value.toLowerCase()}`"
           />
           <base-subtitle
             title="Email:"
@@ -51,16 +51,16 @@
           />
           <base-body
             space="2"
-            :text="`email@${appData.title.toLowerCase()}.com`"
+            :text="`${appData.contact.email.value.toLowerCase()}`"
           />
-          <base-subtitle
+          <!-- <base-subtitle
             title="Twitter:"
             weight="bold"
           />
           <base-body
             space="2"
             text="@twitter"
-          />
+          /> -->
         </v-col>
 
         <!-- Social -->

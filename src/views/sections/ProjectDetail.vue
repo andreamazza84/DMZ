@@ -13,7 +13,7 @@
       >
         <carousel
           :height="$vuetify.breakpoint.mdAndUp ? 'calc(100vh - 100px)' : 'calc(100vh - 60px)'"
-          :src="activeProject.src"
+          :src="gallery"
         />
       </v-col>
     </v-row>
@@ -33,7 +33,8 @@
           <base-project-alt
             class="my-2 mx-1"
             :src="project"
-            :active="$emit.change"
+            :active="i === $store.state.count"
+            :index="i"
           />
         </v-col>
       </template>
@@ -119,17 +120,20 @@
         }
         // console.log('gallery', gallery)
         gallery = gallery.slice()
-        const breakpoint = this.$vuetify.breakpoint.name
-        const sizeMap = {
-          xs: 3,
-          sm: 2,
-          md: 3,
-          lg: 4,
-          xl: 4,
-        }
+        // const breakpoint = this.$vuetify.breakpoint.name
+        // const sizeMap = {
+        //   xs: 3,
+        //   sm: 2,
+        //   md: 3,
+        //   lg: 4,
+        //   xl: 4,
+        // }
         // console.log(gallery.slice(0, sizeMap[breakpoint]))
-        return gallery.slice(0, sizeMap[breakpoint])
+        return gallery // .slice(0, sizeMap[breakpoint])
       },
+    },
+    mounted () {
+      this.$store.dispatch('setArrayLength', this.gallery.length)
     },
   }
 </script>

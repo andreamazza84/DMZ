@@ -14,6 +14,7 @@
         fill
         :src="src"
         :style="active ? 'border: 2px solid #6c99d1' : 'border: 2px solid transparent'"
+        @click="setSlide(index)"
       >
         <v-fade-transition>
           <div
@@ -45,12 +46,17 @@
       },
       active: {
         type: Boolean,
-        required: false,
+        required: true,
+      },
+      index: {
+        type: Number,
+        required: true,
       },
     },
-    mounted () {
-      console.log(this.active)
-      console.log('store', this.$store.state.count)
+    methods: {
+      setSlide (index) {
+        this.$store.dispatch('setCounter', index)
+      },
     },
   }
 </script>

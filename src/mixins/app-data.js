@@ -23,8 +23,8 @@ export default {
           // { name: 'Twitch', icon: 'mdi-twitch', link: 'https://twitch.tv', color: '#9147FF' },
         ],
         contact: {
-          phone: { value: '+1 555 555-5555', icon: 'mdi-phone' },
-          email: { value: 'sample@example.com', icon: 'mdi-email' },
+          phone: { value: '+39 329 955 71 13', icon: 'mdi-phone' },
+          email: { value: 'davidemancinizanchi@example.com', icon: 'mdi-email' },
         },
         recentNews: [
           'Lorem ipsum dolor sit amet, consectetur.',
