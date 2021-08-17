@@ -3,7 +3,7 @@
     id="gallery"
     space="0"
   >
-    <div class="justify-center align-center">
+    <!-- <div class="justify-center align-center">
       <v-tabs
         v-model="selectedTab"
         centered
@@ -15,7 +15,7 @@
           v-text="tab.title"
         />
       </v-tabs>
-    </div>
+    </div> -->
     <v-row
       justify="center"
       align="center"
@@ -55,11 +55,12 @@
     },
     computed: {
       visibleProjects () {
-        return this.appData.projects.filter(project => {
-          if (this.selectedTab.toLowerCase() === 'all') return true
+        return this.appData.projects
+        // .filter(project => {
+        //   if (this.selectedTab.toLowerCase() === 'all') return true
 
-          return project.category.toLowerCase() === this.selectedTab.toLowerCase()
-        })
+        //   return project.category.toLowerCase() === this.selectedTab.toLowerCase()
+        // })
       },
     },
   }
