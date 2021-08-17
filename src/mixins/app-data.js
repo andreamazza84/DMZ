@@ -8,11 +8,30 @@ export default {
         [index]: values[index],
       }), {})
     },
+    colorName: function () {
+      const name = 'DAVIDE MANCINI ZANCHI'
+      const color = [
+        '#c00000',
+        '#ff0000',
+        '#ffc000',
+        '#ffff00',
+        '#92d050',
+        '#00b050',
+        '#00b0f0',
+        '#0070c0',
+        '#002060',
+        '#7030a0',
+      ]
+      const colorName = name.length
+      console.log(color)
+      console.log(colorName)
+    },
   },
   computed: {
     appData () {
       return {
-        title: 'Davide Mancini Zanchi',
+        colorName: this.colorName(),
+        title: '<span style="color: #c00000">D</span><span style="color: #ff0000">A</span>VIDE MANCINI ZANCHI',
         socialLinks: [
           { name: 'Facebook', icon: 'mdi-facebook', link: 'https://facebook.com', color: '#0F98F6' },
           { name: 'Instagram', icon: 'mdi-instagram', link: 'https://instagram.com', color: '#EF0075' },
