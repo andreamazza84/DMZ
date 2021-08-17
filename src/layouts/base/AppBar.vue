@@ -5,7 +5,7 @@
     style="right: 0"
     :color="color || 'white'"
     :height="$vuetify.breakpoint.mdAndUp ? '100px' : '60px'"
-    class="px-12"
+    class="px-6"
   >
     <!-- <v-img
       class="hidden-sm-and-down"
@@ -114,8 +114,7 @@
     },
   }
 </script>
-<style lang="scss" scoped>
-// @import '../../styles/variables.scss';
+<style lang="scss">
   .title-effect{
     &{
       transition: all 300ms;
@@ -123,5 +122,9 @@
     &:hover{
       color: #6c99d1;
     }
+  }
+  .v-toolbar__content{
+    padding-left: 12px;
+    padding-right: 12px;
   }
 </style>

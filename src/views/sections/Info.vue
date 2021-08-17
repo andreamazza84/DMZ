@@ -3,7 +3,7 @@
     <v-theme-provider dark>
       <v-row
         no-gutters
-        class="px-12"
+        class="px-6"
         align="start"
         justify="space-between"
       >

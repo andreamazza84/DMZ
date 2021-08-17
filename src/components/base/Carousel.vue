@@ -5,6 +5,7 @@
     hide-delimiter-background
     show-arrows-on-hover
     hide-delimiters
+    :touch="touch"
   >
     <template v-slot:prev>
       <v-btn
@@ -48,6 +49,14 @@
         type: Array,
         required: true,
       },
+    },
+    data () {
+      return {
+        touch: {
+          left: () => this.next(),
+          right: () => this.prev(),
+        },
+      }
     },
     computed: {
       count: function () {
