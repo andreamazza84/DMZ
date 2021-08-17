@@ -7,5 +7,5 @@ module.exports = {
   ],
   outputDir: 'docs',
 
-  publicPath: process.env.NODE_ENV === 'production' ? '/docs' : '/'
+  publicPath: process.env.NODE_ENV === 'production' ? 'https://andreamazza84.github.io/DMZ/' : '/'
 }
