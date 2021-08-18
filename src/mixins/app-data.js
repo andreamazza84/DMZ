@@ -31,6 +31,7 @@ export default {
         '#ffff00',
         '#ffc000',
         '#ff0000',
+        '#c00000',
       ]
       let colorLetter = ''
       let colorName = ''
@@ -61,29 +62,10 @@ export default {
         colorLetter = `<span class="title-effect" style="color: ${color[i]}">${name.charAt(i)}<span>`
         colorName = colorName.concat(colorLetter)
       }
-      console.log(colorName)
       return colorName
     },
     colorName2: function () {
       const name = 'MANCINI'
-      const color = [
-        '#00b050',
-        '#92d050',
-        '#ffff00',
-        '#ffc000',
-        '#ff0000',
-      ]
-      let colorLetter = ''
-      let colorName = ''
-      for (let i = 0; i < name.length; i++) {
-        colorLetter = `<span class="title-effect" style="color: ${color[i]}">${name.charAt(i)}<span>`
-        colorName = colorName.concat(colorLetter)
-      }
-      console.log(colorName)
-      return colorName
-    },
-    colorName3: function () {
-      const name = 'ZANCHI'
       const color = [
         '#00b0f0',
         '#0070c0',
@@ -99,7 +81,24 @@ export default {
         colorLetter = `<span class="title-effect" style="color: ${color[i]}">${name.charAt(i)}<span>`
         colorName = colorName.concat(colorLetter)
       }
-      console.log(colorName)
+      return colorName
+    },
+    colorName3: function () {
+      const name = 'ZANCHI'
+      const color = [
+        '#00b050',
+        '#92d050',
+        '#ffff00',
+        '#ffc000',
+        '#ff0000',
+        '#c00000',
+      ]
+      let colorLetter = ''
+      let colorName = ''
+      for (let i = 0; i < name.length; i++) {
+        colorLetter = `<span class="title-effect" style="color: ${color[i]}">${name.charAt(i)}<span>`
+        colorName = colorName.concat(colorLetter)
+      }
       // :height="$vuetify.breakpoint.mdAndUp ? '100px' : '60px'"
       return colorName
     },
@@ -115,17 +114,17 @@ export default {
         // name2:
         // name3:
         socialLinks: [
-          { name: 'Facebook', icon: 'mdi-facebook', link: 'https://facebook.com', color: '#0F98F6' },
+          { name: 'Facebook', icon: 'mdi-facebook', link: 'https://www.facebook.com/tuxay.khjoson', color: '#0F98F6' },
           { name: 'Instagram', icon: 'mdi-instagram', link: 'https://instagram.com', color: '#EF0075' },
-          { name: 'Youtube', icon: 'mdi-youtube', link: 'https://youtube.com', color: '#FE0200' },
-          { name: 'LinkedIn', icon: 'mdi-linkedin', link: 'https://linkedin.com', color: '#0077B5' },
+          // { name: 'Youtube', icon: 'mdi-youtube', link: 'https://youtube.com', color: '#FE0200' },
+          // { name: 'LinkedIn', icon: 'mdi-linkedin', link: 'https://linkedin.com', color: '#0077B5' },
           // { name: 'Twitter', icon: 'mdi-twitter', link: 'https://twitter.com', color: '#1A91DA' },
           // { name: 'Soundcloud', icon: 'mdi-soundcloud', link: 'https://soundcloud.com', color: '#FF5501' },
           // { name: 'Twitch', icon: 'mdi-twitch', link: 'https://twitch.tv', color: '#9147FF' },
         ],
         contact: {
           phone: { value: '+39 329 955 71 13', icon: 'mdi-phone' },
-          email: { value: 'davidemancinizanchi@example.com', icon: 'mdi-email' },
+          email: { value: 'davidemancinizanchi@gmail.com', icon: 'mdi-email' },
         },
         recentNews: [
           'Lorem ipsum dolor sit amet, consectetur.',
