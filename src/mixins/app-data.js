@@ -17,21 +17,103 @@ export default {
         '#ffff00',
         '#92d050',
         '#00b050',
+        '',
         '#00b0f0',
         '#0070c0',
         '#002060',
         '#7030a0',
+        '#002060',
+        '#0070c0',
+        '#00b0f0',
+        '',
+        '#00b050',
+        '#92d050',
+        '#ffff00',
+        '#ffc000',
+        '#ff0000',
       ]
-      const colorName = name.length
-      console.log(color)
+      let colorLetter = ''
+      let colorName = ''
+      for (let i = 0; i < name.length; i++) {
+        if (color[i] === '') {
+          colorLetter = '&nbsp;'
+        } else {
+          colorLetter = `<span class="title-effect" style="color: ${color[i]}">${name.charAt(i)}<span>`
+        }
+        colorName = colorName.concat(colorLetter)
+      }
+      // console.log(colorName)
+      return colorName
+    },
+    colorName1: function () {
+      const name = 'DAVIDE'
+      const color = [
+        '#c00000',
+        '#ff0000',
+        '#ffc000',
+        '#ffff00',
+        '#92d050',
+        '#00b050',
+      ]
+      let colorLetter = ''
+      let colorName = ''
+      for (let i = 0; i < name.length; i++) {
+        colorLetter = `<span class="title-effect" style="color: ${color[i]}">${name.charAt(i)}<span>`
+        colorName = colorName.concat(colorLetter)
+      }
       console.log(colorName)
+      return colorName
+    },
+    colorName2: function () {
+      const name = 'MANCINI'
+      const color = [
+        '#00b050',
+        '#92d050',
+        '#ffff00',
+        '#ffc000',
+        '#ff0000',
+      ]
+      let colorLetter = ''
+      let colorName = ''
+      for (let i = 0; i < name.length; i++) {
+        colorLetter = `<span class="title-effect" style="color: ${color[i]}">${name.charAt(i)}<span>`
+        colorName = colorName.concat(colorLetter)
+      }
+      console.log(colorName)
+      return colorName
+    },
+    colorName3: function () {
+      const name = 'ZANCHI'
+      const color = [
+        '#00b0f0',
+        '#0070c0',
+        '#002060',
+        '#7030a0',
+        '#002060',
+        '#0070c0',
+        '#00b0f0',
+      ]
+      let colorLetter = ''
+      let colorName = ''
+      for (let i = 0; i < name.length; i++) {
+        colorLetter = `<span class="title-effect" style="color: ${color[i]}">${name.charAt(i)}<span>`
+        colorName = colorName.concat(colorLetter)
+      }
+      console.log(colorName)
+      // :height="$vuetify.breakpoint.mdAndUp ? '100px' : '60px'"
+      return colorName
     },
   },
   computed: {
     appData () {
       return {
-        colorName: this.colorName(),
-        title: '<span style="color: #c00000">D</span><span style="color: #ff0000">A</span>VIDE MANCINI ZANCHI',
+        title: 'DAVIDE MANCINI ZANCHI',
+        title1: this.colorName1(),
+        title2: this.colorName2(),
+        title3: this.colorName3(),
+        // name1:
+        // name2:
+        // name3:
         socialLinks: [
           { name: 'Facebook', icon: 'mdi-facebook', link: 'https://facebook.com', color: '#0F98F6' },
           { name: 'Instagram', icon: 'mdi-instagram', link: 'https://instagram.com', color: '#EF0075' },

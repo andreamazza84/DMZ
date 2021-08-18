@@ -1,29 +1,56 @@
 <template>
   <v-app-bar
     app
-    elevate-on-scroll
+    hide-on-scroll
     style="right: 0"
     :color="color || 'white'"
-    :height="$vuetify.breakpoint.mdAndUp ? '100px' : '60px'"
+    height="158px"
     class="px-6"
   >
-    <!-- <v-img
-      class="hidden-sm-and-down"
-      :max-width="$vuetify.breakpoint.mdAndUp ? '200px' : '100px'"
-      max-height="120px"
-      min-height="120px"
-      :src="require('@/assets/campfire.svg')"
-    /> -->
-    <v-toolbar-title class="text-h5 title-effect">
-      <router-link
-        :to="{ name: 'Portfolio' }"
-        tag="h3"
-        style="cursor: pointer"
-        v-html="appData.title"
-      />
+    <v-toolbar-title class="text-h5">
+      <v-row class="justify-center">
+        <v-col
+          class="col"
+          cols="12"
+          sm="4"
+          md="4"
+        >
+          <router-link
+            :to="{ name: 'Portfolio' }"
+            :tag="$vuetify.breakpoint.mdAndUp ? 'h2' : 'h4'"
+            style="cursor: pointer"
+            v-html="appData.title1"
+          />
+        </v-col>
+        <v-col
+          class="col"
+          cols="12"
+          sm="4"
+          md="4"
+        >
+          <router-link
+            :to="{ name: 'Portfolio' }"
+            :tag="$vuetify.breakpoint.mdAndUp ? 'h2' : 'h4'"
+            style="cursor: pointer"
+            v-html="appData.title2"
+          />
+        </v-col>
+        <v-col
+          class="col"
+          cols="12"
+          sm="4"
+          md="4"
+        >
+          <router-link
+            :to="{ name: 'Portfolio' }"
+            :tag="$vuetify.breakpoint.mdAndUp ? 'h2' : 'h4'"
+            style="cursor: pointer"
+            v-html="appData.title3"
+          />
+        </v-col>
+      </v-row>
     </v-toolbar-title>
     <v-spacer />
-    <!-- <div v-if="$vuetify.breakpoint.mdAndUp"> -->
     <div>
       <v-tabs
         hide-slider
@@ -117,10 +144,12 @@
 <style lang="scss">
   .title-effect{
     &{
+      font-family: 'Monoton';
+      letter-spacing: 5px;
       transition: all 300ms;
     }
     &:hover{
-      color: #6c99d1;
+      color: #ffffff !important;
     }
   }
   .v-toolbar__content{
