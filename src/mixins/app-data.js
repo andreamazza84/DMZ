@@ -43,7 +43,6 @@ export default {
         }
         colorName = colorName.concat(colorLetter)
       }
-      // console.log(colorName)
       return colorName
     },
     colorName1: function () {
@@ -100,6 +99,8 @@ export default {
         colorName = colorName.concat(colorLetter)
       }
       // :height="$vuetify.breakpoint.mdAndUp ? '100px' : '60px'"
+      // console.log(colorName)
+      // colorName = `<div class="name">${colorName}</div>`
       return colorName
     },
   },
@@ -110,9 +111,6 @@ export default {
         title1: this.colorName1(),
         title2: this.colorName2(),
         title3: this.colorName3(),
-        // name1:
-        // name2:
-        // name3:
         socialLinks: [
           { name: 'Facebook', icon: 'mdi-facebook', link: 'https://www.facebook.com/tuxay.khjoson', color: '#0F98F6' },
           { name: 'Instagram', icon: 'mdi-instagram', link: 'https://instagram.com', color: '#EF0075' },

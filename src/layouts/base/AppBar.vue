@@ -4,51 +4,31 @@
     hide-on-scroll
     style="right: 0"
     :color="color || 'white'"
-    height="158px"
     class="px-6"
+    height="100px"
   >
-    <v-toolbar-title class="text-h5">
-      <v-row class="justify-center">
-        <v-col
-          class="col"
-          cols="12"
-          sm="4"
-          md="4"
-        >
-          <router-link
-            :to="{ name: 'Portfolio' }"
-            :tag="$vuetify.breakpoint.mdAndUp ? 'h2' : 'h4'"
-            style="cursor: pointer"
-            v-html="appData.title1"
-          />
-        </v-col>
-        <v-col
-          class="col"
-          cols="12"
-          sm="4"
-          md="4"
-        >
-          <router-link
-            :to="{ name: 'Portfolio' }"
-            :tag="$vuetify.breakpoint.mdAndUp ? 'h2' : 'h4'"
-            style="cursor: pointer"
-            v-html="appData.title2"
-          />
-        </v-col>
-        <v-col
-          class="col"
-          cols="12"
-          sm="4"
-          md="4"
-        >
-          <router-link
-            :to="{ name: 'Portfolio' }"
-            :tag="$vuetify.breakpoint.mdAndUp ? 'h2' : 'h4'"
-            style="cursor: pointer"
-            v-html="appData.title3"
-          />
-        </v-col>
-      </v-row>
+    <v-toolbar-title class="text-h5 title-container">
+      <router-link
+        class="link"
+        :to="{ name: 'Portfolio' }"
+        :tag="$vuetify.breakpoint.mdAndUp ? 'h2' : 'h3'"
+        style="cursor: pointer"
+        v-html="appData.title1"
+      />
+      <router-link
+        class="link"
+        :to="{ name: 'Portfolio' }"
+        :tag="$vuetify.breakpoint.mdAndUp ? 'h2' : 'h3'"
+        style="cursor: pointer"
+        v-html="appData.title2"
+      />
+      <router-link
+        class="link"
+        :to="{ name: 'Portfolio' }"
+        :tag="$vuetify.breakpoint.mdAndUp ? 'h2' : 'h3'"
+        style="cursor: pointer"
+        v-html="appData.title3"
+      />
     </v-toolbar-title>
     <v-spacer />
     <div>
@@ -142,10 +122,15 @@
   }
 </script>
 <style lang="scss">
+  .title-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
   .title-effect{
     &{
       font-family: 'Monoton';
-      letter-spacing: 5px;
+      // letter-spacing: 2px;
       transition: all 300ms;
     }
     &:hover{
@@ -155,5 +140,9 @@
   .v-toolbar__content{
     padding-left: 12px;
     padding-right: 12px;
+  }
+  .link{
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
   }
 </style>
