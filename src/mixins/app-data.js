@@ -1,4 +1,5 @@
 export default {
+  // :height="$vuetify.breakpoint.mdAndUp ? '100px' : '60px'"
   methods: {
     mapFiles: function (context) {
       const keys = context.keys()
@@ -7,43 +8,6 @@ export default {
         ...accumulator,
         [index]: values[index],
       }), {})
-    },
-    colorName: function () {
-      const name = 'DAVIDE MANCINI ZANCHI'
-      const color = [
-        '#c00000',
-        '#ff0000',
-        '#ffc000',
-        '#ffff00',
-        '#92d050',
-        '#00b050',
-        '',
-        '#00b0f0',
-        '#0070c0',
-        '#002060',
-        '#7030a0',
-        '#002060',
-        '#0070c0',
-        '#00b0f0',
-        '',
-        '#00b050',
-        '#92d050',
-        '#ffff00',
-        '#ffc000',
-        '#ff0000',
-        '#c00000',
-      ]
-      let colorLetter = ''
-      let colorName = ''
-      for (let i = 0; i < name.length; i++) {
-        if (color[i] === '') {
-          colorLetter = '&nbsp;'
-        } else {
-          colorLetter = `<span class="title-effect" style="color: ${color[i]}">${name.charAt(i)}<span>`
-        }
-        colorName = colorName.concat(colorLetter)
-      }
-      return colorName
     },
     colorName1: function () {
       const name = 'DAVIDE'
@@ -98,9 +62,6 @@ export default {
         colorLetter = `<span class="title-effect" style="color: ${color[i]}">${name.charAt(i)}<span>`
         colorName = colorName.concat(colorLetter)
       }
-      // :height="$vuetify.breakpoint.mdAndUp ? '100px' : '60px'"
-      // console.log(colorName)
-      // colorName = `<div class="name">${colorName}</div>`
       return colorName
     },
   },
@@ -113,7 +74,7 @@ export default {
         title3: this.colorName3(),
         socialLinks: [
           { name: 'Facebook', icon: 'mdi-facebook', link: 'https://www.facebook.com/tuxay.khjoson', color: '#0F98F6' },
-          { name: 'Instagram', icon: 'mdi-instagram', link: 'https://instagram.com', color: '#EF0075' },
+          { name: 'Instagram', icon: 'mdi-instagram', link: 'https://www.instagram.com/davidemancinizanchi/', color: '#EF0075' },
           // { name: 'Youtube', icon: 'mdi-youtube', link: 'https://youtube.com', color: '#FE0200' },
           // { name: 'LinkedIn', icon: 'mdi-linkedin', link: 'https://linkedin.com', color: '#0077B5' },
           // { name: 'Twitter', icon: 'mdi-twitter', link: 'https://twitter.com', color: '#1A91DA' },
@@ -162,9 +123,10 @@ export default {
           },
         ],
         projects: [
+          // TEMPLATE
           // {
           //   id: 1,
-          //   slug: 'ciao1',
+          //   slug: 'folder-00',
           //   src: require('@/assets/projects/adrian-TvN54bnuQg8-unsplash.jpg'),
           //   title: 'Adrian',
           //   subtitle: 'Unsplash',
@@ -173,176 +135,12 @@ export default {
           //   tags: ['tag', 'tag', 'tag'],
           //   category: 'mountain',
           // },
-          // {
-          //   id: 2,
-          //   slug: 'ciao2',
-          //   src: require('@/assets/projects/aliaksei-lepik-8qTBHezzF8I-unsplash.jpg'),
-          //   title: 'Aliaksei Lepik',
-          //   subtitle: 'Unsplash',
-          //   date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
-          //   description: 'Duis fringilla mauris ac pellentesque suscipit. Vestibulum in feugiat felis. Cras eget mattis lectus, sit amet ultricies leo. Donec imperdiet diam eu lectus scelerisque accumsan. Quisque sollicitudin, diam non eleifend tempor, tortor tortor pulvinar enim, sit amet maximus neque metus ac nulla. Morbi pellentesque leo ut nulla scelerisque pulvinar. In hac habitasse platea dictumst. Donec scelerisque ante ante, vel tempor dolor auctor ut. Sed et luctus leo, eu egestas sapien. In semper commodo urna, id lacinia mi pretium eu. Suspendisse ornare blandit ligula id fermentum. Nulla lobortis, ligula quis consequat elementum, elit odio fringilla ligula, commodo tristique leo elit ac ex. Vestibulum semper sagittis odio sed aliquam. Pellentesque at turpis vel augue scelerisque malesuada at sit amet augue.',
-          //   tags: ['tag', 'tag', 'tag'],
-          //   category: 'fire',
-          // },
-          // {
-          //   id: 3,
-          //   slug: 'ciao3',
-          //   src: require('@/assets/projects/carlos-hevia-qhB6S2dts8A-unsplash.jpg'),
-          //   title: 'Carlos Hevia',
-          //   subtitle: 'Unsplash',
-          //   date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
-          //   description: 'Duis fringilla mauris ac pellentesque suscipit. Vestibulum in feugiat felis. Cras eget mattis lectus, sit amet ultricies leo. Donec imperdiet diam eu lectus scelerisque accumsan. Quisque sollicitudin, diam non eleifend tempor, tortor tortor pulvinar enim, sit amet maximus neque metus ac nulla. Morbi pellentesque leo ut nulla scelerisque pulvinar. In hac habitasse platea dictumst. Donec scelerisque ante ante, vel tempor dolor auctor ut. Sed et luctus leo, eu egestas sapien. In semper commodo urna, id lacinia mi pretium eu. Suspendisse ornare blandit ligula id fermentum. Nulla lobortis, ligula quis consequat elementum, elit odio fringilla ligula, commodo tristique leo elit ac ex. Vestibulum semper sagittis odio sed aliquam. Pellentesque at turpis vel augue scelerisque malesuada at sit amet augue.',
-          //   tags: ['tag', 'tag', 'tag'],
-          //   category: 'mountain',
-          // },
-          // {
-          //   id: 4,
-          //   slug: 'ciao4',
-          //   src: require('@/assets/projects/cindy-chen-EP4VrAn-WaY-unsplash.jpg'),
-          //   title: 'Cindy Chen',
-          //   subtitle: 'Unsplash',
-          //   date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
-          //   description: 'Duis fringilla mauris ac pellentesque suscipit. Vestibulum in feugiat felis. Cras eget mattis lectus, sit amet ultricies leo. Donec imperdiet diam eu lectus scelerisque accumsan. Quisque sollicitudin, diam non eleifend tempor, tortor tortor pulvinar enim, sit amet maximus neque metus ac nulla. Morbi pellentesque leo ut nulla scelerisque pulvinar. In hac habitasse platea dictumst. Donec scelerisque ante ante, vel tempor dolor auctor ut. Sed et luctus leo, eu egestas sapien. In semper commodo urna, id lacinia mi pretium eu. Suspendisse ornare blandit ligula id fermentum. Nulla lobortis, ligula quis consequat elementum, elit odio fringilla ligula, commodo tristique leo elit ac ex. Vestibulum semper sagittis odio sed aliquam. Pellentesque at turpis vel augue scelerisque malesuada at sit amet augue.',
-          //   tags: ['tag', 'tag', 'tag'],
-          //   category: 'night',
-          // },
-          // {
-          //   id: 5,
-          //   slug: 'ciao5',
-          //   src: require('@/assets/projects/everett-mcintire-BPCsppbNRMI-unsplash.jpg'),
-          //   title: 'Everett Mcintire',
-          //   subtitle: 'Unsplash',
-          //   date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
-          //   description: 'Duis fringilla mauris ac pellentesque suscipit. Vestibulum in feugiat felis. Cras eget mattis lectus, sit amet ultricies leo. Donec imperdiet diam eu lectus scelerisque accumsan. Quisque sollicitudin, diam non eleifend tempor, tortor tortor pulvinar enim, sit amet maximus neque metus ac nulla. Morbi pellentesque leo ut nulla scelerisque pulvinar. In hac habitasse platea dictumst. Donec scelerisque ante ante, vel tempor dolor auctor ut. Sed et luctus leo, eu egestas sapien. In semper commodo urna, id lacinia mi pretium eu. Suspendisse ornare blandit ligula id fermentum. Nulla lobortis, ligula quis consequat elementum, elit odio fringilla ligula, commodo tristique leo elit ac ex. Vestibulum semper sagittis odio sed aliquam. Pellentesque at turpis vel augue scelerisque malesuada at sit amet augue.',
-          //   tags: ['tag', 'tag', 'tag'],
-          //   category: 'day',
-          // },
-          // {
-          //   id: 6,
-          //   slug: 'ciao6',
-          //   src: require('@/assets/projects/jamison-mcandie-waZEHLRP98s-unsplash.jpg'),
-          //   title: 'Jamison Mcandie',
-          //   subtitle: 'Unsplash',
-          //   date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
-          //   description: 'Duis fringilla mauris ac pellentesque suscipit. Vestibulum in feugiat felis. Cras eget mattis lectus, sit amet ultricies leo. Donec imperdiet diam eu lectus scelerisque accumsan. Quisque sollicitudin, diam non eleifend tempor, tortor tortor pulvinar enim, sit amet maximus neque metus ac nulla. Morbi pellentesque leo ut nulla scelerisque pulvinar. In hac habitasse platea dictumst. Donec scelerisque ante ante, vel tempor dolor auctor ut. Sed et luctus leo, eu egestas sapien. In semper commodo urna, id lacinia mi pretium eu. Suspendisse ornare blandit ligula id fermentum. Nulla lobortis, ligula quis consequat elementum, elit odio fringilla ligula, commodo tristique leo elit ac ex. Vestibulum semper sagittis odio sed aliquam. Pellentesque at turpis vel augue scelerisque malesuada at sit amet augue.',
-          //   tags: ['tag', 'tag', 'tag'],
-          //   category: 'night',
-          // },
-          // {
-          //   id: 7,
-          //   slug: 'ciao7',
-          //   src: require('@/assets/projects/jerome-bertaux-tRkBF9Ujqw4-unsplash.jpg'),
-          //   title: 'Jerome Bertaux',
-          //   subtitle: 'Unsplash',
-          //   date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
-          //   description: 'Duis fringilla mauris ac pellentesque suscipit. Vestibulum in feugiat felis. Cras eget mattis lectus, sit amet ultricies leo. Donec imperdiet diam eu lectus scelerisque accumsan. Quisque sollicitudin, diam non eleifend tempor, tortor tortor pulvinar enim, sit amet maximus neque metus ac nulla. Morbi pellentesque leo ut nulla scelerisque pulvinar. In hac habitasse platea dictumst. Donec scelerisque ante ante, vel tempor dolor auctor ut. Sed et luctus leo, eu egestas sapien. In semper commodo urna, id lacinia mi pretium eu. Suspendisse ornare blandit ligula id fermentum. Nulla lobortis, ligula quis consequat elementum, elit odio fringilla ligula, commodo tristique leo elit ac ex. Vestibulum semper sagittis odio sed aliquam. Pellentesque at turpis vel augue scelerisque malesuada at sit amet augue.',
-          //   tags: ['tag', 'tag', 'tag'],
-          //   category: 'day',
-          // },
-          // {
-          //   id: 8,
-          //   slug: 'ciao8',
-          //   src: require('@/assets/projects/kimson-doan-AZMmUy2qL6A-unsplash.jpg'),
-          //   title: 'Kimson Doan',
-          //   subtitle: 'Unsplash',
-          //   date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
-          //   description: 'Duis fringilla mauris ac pellentesque suscipit. Vestibulum in feugiat felis. Cras eget mattis lectus, sit amet ultricies leo. Donec imperdiet diam eu lectus scelerisque accumsan. Quisque sollicitudin, diam non eleifend tempor, tortor tortor pulvinar enim, sit amet maximus neque metus ac nulla. Morbi pellentesque leo ut nulla scelerisque pulvinar. In hac habitasse platea dictumst. Donec scelerisque ante ante, vel tempor dolor auctor ut. Sed et luctus leo, eu egestas sapien. In semper commodo urna, id lacinia mi pretium eu. Suspendisse ornare blandit ligula id fermentum. Nulla lobortis, ligula quis consequat elementum, elit odio fringilla ligula, commodo tristique leo elit ac ex. Vestibulum semper sagittis odio sed aliquam. Pellentesque at turpis vel augue scelerisque malesuada at sit amet augue.',
-          //   tags: ['tag', 'tag', 'tag'],
-          //   category: 'night',
-          // },
-          // {
-          //   id: 9,
-          //   slug: 'ciao9',
-          //   src: require('@/assets/projects/kseniya-petukhova-_wj5Jd-AaK4-unsplash.jpg'),
-          //   title: 'Kseniya Petukhova',
-          //   subtitle: 'Unsplash',
-          //   date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
-          //   description: 'Duis fringilla mauris ac pellentesque suscipit. Vestibulum in feugiat felis. Cras eget mattis lectus, sit amet ultricies leo. Donec imperdiet diam eu lectus scelerisque accumsan. Quisque sollicitudin, diam non eleifend tempor, tortor tortor pulvinar enim, sit amet maximus neque metus ac nulla. Morbi pellentesque leo ut nulla scelerisque pulvinar. In hac habitasse platea dictumst. Donec scelerisque ante ante, vel tempor dolor auctor ut. Sed et luctus leo, eu egestas sapien. In semper commodo urna, id lacinia mi pretium eu. Suspendisse ornare blandit ligula id fermentum. Nulla lobortis, ligula quis consequat elementum, elit odio fringilla ligula, commodo tristique leo elit ac ex. Vestibulum semper sagittis odio sed aliquam. Pellentesque at turpis vel augue scelerisque malesuada at sit amet augue.',
-          //   tags: ['tag', 'tag', 'tag'],
-          //   category: 'mountain',
-          // },
-          // {
-          //   id: 10,
-          //   slug: 'ciao10',
-          //   src: require('@/assets/projects/mike-erskine-S_VbdMTsdiA-unsplash.jpg'),
-          //   title: 'Mike Erskine',
-          //   subtitle: 'Unsplash',
-          //   date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
-          //   description: 'Duis fringilla mauris ac pellentesque suscipit. Vestibulum in feugiat felis. Cras eget mattis lectus, sit amet ultricies leo. Donec imperdiet diam eu lectus scelerisque accumsan. Quisque sollicitudin, diam non eleifend tempor, tortor tortor pulvinar enim, sit amet maximus neque metus ac nulla. Morbi pellentesque leo ut nulla scelerisque pulvinar. In hac habitasse platea dictumst. Donec scelerisque ante ante, vel tempor dolor auctor ut. Sed et luctus leo, eu egestas sapien. In semper commodo urna, id lacinia mi pretium eu. Suspendisse ornare blandit ligula id fermentum. Nulla lobortis, ligula quis consequat elementum, elit odio fringilla ligula, commodo tristique leo elit ac ex. Vestibulum semper sagittis odio sed aliquam. Pellentesque at turpis vel augue scelerisque malesuada at sit amet augue.',
-          //   tags: ['tag', 'tag', 'tag'],
-          //   category: 'fire',
-          // },
-          // {
-          //   id: 11,
-          //   slug: 'ciao11',
-          //   src: require('@/assets/projects/patrick-boucher-0ccc00jMW1U-unsplash.jpg'),
-          //   title: 'Patrick Boucher',
-          //   subtitle: 'Unsplash',
-          //   date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
-          //   description: 'Duis fringilla mauris ac pellentesque suscipit. Vestibulum in feugiat felis. Cras eget mattis lectus, sit amet ultricies leo. Donec imperdiet diam eu lectus scelerisque accumsan. Quisque sollicitudin, diam non eleifend tempor, tortor tortor pulvinar enim, sit amet maximus neque metus ac nulla. Morbi pellentesque leo ut nulla scelerisque pulvinar. In hac habitasse platea dictumst. Donec scelerisque ante ante, vel tempor dolor auctor ut. Sed et luctus leo, eu egestas sapien. In semper commodo urna, id lacinia mi pretium eu. Suspendisse ornare blandit ligula id fermentum. Nulla lobortis, ligula quis consequat elementum, elit odio fringilla ligula, commodo tristique leo elit ac ex. Vestibulum semper sagittis odio sed aliquam. Pellentesque at turpis vel augue scelerisque malesuada at sit amet augue.',
-          //   tags: ['tag', 'tag', 'tag'],
-          //   category: 'day',
-          // },
-          // {
-          //   id: 12,
-          //   slug: 'ciao12',
-          //   src: require('@/assets/projects/robson-hatsukami-morgan-RTKaEcGKarQ-unsplash.jpg'),
-          //   title: 'Robson Hatsukami Morgan',
-          //   subtitle: 'Unsplash',
-          //   date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
-          //   description: 'Duis fringilla mauris ac pellentesque suscipit. Vestibulum in feugiat felis. Cras eget mattis lectus, sit amet ultricies leo. Donec imperdiet diam eu lectus scelerisque accumsan. Quisque sollicitudin, diam non eleifend tempor, tortor tortor pulvinar enim, sit amet maximus neque metus ac nulla. Morbi pellentesque leo ut nulla scelerisque pulvinar. In hac habitasse platea dictumst. Donec scelerisque ante ante, vel tempor dolor auctor ut. Sed et luctus leo, eu egestas sapien. In semper commodo urna, id lacinia mi pretium eu. Suspendisse ornare blandit ligula id fermentum. Nulla lobortis, ligula quis consequat elementum, elit odio fringilla ligula, commodo tristique leo elit ac ex. Vestibulum semper sagittis odio sed aliquam. Pellentesque at turpis vel augue scelerisque malesuada at sit amet augue.',
-          //   tags: ['tag', 'tag', 'tag'],
-          //   category: 'fire',
-          // },
-          // {
-          //   id: 13,
-          //   slug: 'ciao13',
-          //   src: require('@/assets/projects/sahin-yesilyaprak-V7uP-XzqX18-unsplash.jpg'),
-          //   title: 'Sahin Yesilyaprak',
-          //   subtitle: 'Unsplash',
-          //   date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
-          //   description: 'Duis fringilla mauris ac pellentesque suscipit. Vestibulum in feugiat felis. Cras eget mattis lectus, sit amet ultricies leo. Donec imperdiet diam eu lectus scelerisque accumsan. Quisque sollicitudin, diam non eleifend tempor, tortor tortor pulvinar enim, sit amet maximus neque metus ac nulla. Morbi pellentesque leo ut nulla scelerisque pulvinar. In hac habitasse platea dictumst. Donec scelerisque ante ante, vel tempor dolor auctor ut. Sed et luctus leo, eu egestas sapien. In semper commodo urna, id lacinia mi pretium eu. Suspendisse ornare blandit ligula id fermentum. Nulla lobortis, ligula quis consequat elementum, elit odio fringilla ligula, commodo tristique leo elit ac ex. Vestibulum semper sagittis odio sed aliquam. Pellentesque at turpis vel augue scelerisque malesuada at sit amet augue.',
-          //   tags: ['tag', 'tag', 'tag'],
-          //   category: 'fire',
-          // },
-          // {
-          //   id: 14,
-          //   slug: 'ciao14',
-          //   src: require('@/assets/projects/sayan-nath-MCfy9IZivT0-unsplash.jpg'),
-          //   title: 'Sayan Nath',
-          //   subtitle: 'Unsplash',
-          //   date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
-          //   description: 'Duis fringilla mauris ac pellentesque suscipit. Vestibulum in feugiat felis. Cras eget mattis lectus, sit amet ultricies leo. Donec imperdiet diam eu lectus scelerisque accumsan. Quisque sollicitudin, diam non eleifend tempor, tortor tortor pulvinar enim, sit amet maximus neque metus ac nulla. Morbi pellentesque leo ut nulla scelerisque pulvinar. In hac habitasse platea dictumst. Donec scelerisque ante ante, vel tempor dolor auctor ut. Sed et luctus leo, eu egestas sapien. In semper commodo urna, id lacinia mi pretium eu. Suspendisse ornare blandit ligula id fermentum. Nulla lobortis, ligula quis consequat elementum, elit odio fringilla ligula, commodo tristique leo elit ac ex. Vestibulum semper sagittis odio sed aliquam. Pellentesque at turpis vel augue scelerisque malesuada at sit amet augue.',
-          //   tags: ['tag', 'tag', 'tag'],
-          //   category: 'mountain',
-          // },
-          // {
-          //   id: 15,
-          //   slug: 'ciao15',
-          //   src: require('@/assets/projects/thomas-aeschleman-BG8te7fVCqU-unsplash.jpg'),
-          //   title: 'Thomas Aeschleman',
-          //   subtitle: 'Unsplash',
-          //   date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
-          //   description: 'Duis fringilla mauris ac pellentesque suscipit. Vestibulum in feugiat felis. Cras eget mattis lectus, sit amet ultricies leo. Donec imperdiet diam eu lectus scelerisque accumsan. Quisque sollicitudin, diam non eleifend tempor, tortor tortor pulvinar enim, sit amet maximus neque metus ac nulla. Morbi pellentesque leo ut nulla scelerisque pulvinar. In hac habitasse platea dictumst. Donec scelerisque ante ante, vel tempor dolor auctor ut. Sed et luctus leo, eu egestas sapien. In semper commodo urna, id lacinia mi pretium eu. Suspendisse ornare blandit ligula id fermentum. Nulla lobortis, ligula quis consequat elementum, elit odio fringilla ligula, commodo tristique leo elit ac ex. Vestibulum semper sagittis odio sed aliquam. Pellentesque at turpis vel augue scelerisque malesuada at sit amet augue.',
-          //   tags: ['tag', 'tag', 'tag'],
-          //   category: 'night',
-          // },
-          // {
-          //   id: 16,
-          //   slug: 'ciao16',
-          //   src: require('@/assets/projects/twitter-praizist-PDNc3fFFrYk-unsplash.jpg'),
-          //   title: '@praizist Twitter',
-          //   subtitle: 'Unsplash',
-          //   date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
-          //   description: 'Duis fringilla mauris ac pellentesque suscipit. Vestibulum in feugiat felis. Cras eget mattis lectus, sit amet ultricies leo. Donec imperdiet diam eu lectus scelerisque accumsan. Quisque sollicitudin, diam non eleifend tempor, tortor tortor pulvinar enim, sit amet maximus neque metus ac nulla. Morbi pellentesque leo ut nulla scelerisque pulvinar. In hac habitasse platea dictumst. Donec scelerisque ante ante, vel tempor dolor auctor ut. Sed et luctus leo, eu egestas sapien. In semper commodo urna, id lacinia mi pretium eu. Suspendisse ornare blandit ligula id fermentum. Nulla lobortis, ligula quis consequat elementum, elit odio fringilla ligula, commodo tristique leo elit ac ex. Vestibulum semper sagittis odio sed aliquam. Pellentesque at turpis vel augue scelerisque malesuada at sit amet augue.',
-          //   tags: ['tag', 'tag', 'tag'],
-          //   category: 'day',
-          // },
+          // /TEMPLATE
           {
-            id: 17,
+            id: 1,
             slug: 'ciao16',
             src: this.mapFiles(require.context('@/assets/projects/folder-00/', true, /\.(png|gif|ico|jpg|jpeg)$/)),
-            title: '@praizist Twitter',
+            title: 'Demo',
             subtitle: 'Unsplash',
             date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
             description: 'Duis fringilla mauris ac pellentesque suscipit. Vestibulum in feugiat felis. Cras eget mattis lectus, sit amet ultricies leo. Donec imperdiet diam eu lectus scelerisque accumsan. Quisque sollicitudin, diam non eleifend tempor, tortor tortor pulvinar enim, sit amet maximus neque metus ac nulla. Morbi pellentesque leo ut nulla scelerisque pulvinar. In hac habitasse platea dictumst. Donec scelerisque ante ante, vel tempor dolor auctor ut. Sed et luctus leo, eu egestas sapien. In semper commodo urna, id lacinia mi pretium eu. Suspendisse ornare blandit ligula id fermentum. Nulla lobortis, ligula quis consequat elementum, elit odio fringilla ligula, commodo tristique leo elit ac ex. Vestibulum semper sagittis odio sed aliquam. Pellentesque at turpis vel augue scelerisque malesuada at sit amet augue.',
@@ -350,10 +148,10 @@ export default {
             category: '2019',
           },
           {
-            id: 18,
+            id: 2,
             slug: 'ciao16',
             src: this.mapFiles(require.context('@/assets/projects/folder-01/', true, /\.(png|gif|ico|jpg|jpeg)$/)),
-            title: '@praizist Twitter',
+            title: 'Prova',
             subtitle: 'Unsplash',
             date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
             description: 'Duis fringilla mauris ac pellentesque suscipit. Vestibulum in feugiat felis. Cras eget mattis lectus, sit amet ultricies leo. Donec imperdiet diam eu lectus scelerisque accumsan. Quisque sollicitudin, diam non eleifend tempor, tortor tortor pulvinar enim, sit amet maximus neque metus ac nulla. Morbi pellentesque leo ut nulla scelerisque pulvinar. In hac habitasse platea dictumst. Donec scelerisque ante ante, vel tempor dolor auctor ut. Sed et luctus leo, eu egestas sapien. In semper commodo urna, id lacinia mi pretium eu. Suspendisse ornare blandit ligula id fermentum. Nulla lobortis, ligula quis consequat elementum, elit odio fringilla ligula, commodo tristique leo elit ac ex. Vestibulum semper sagittis odio sed aliquam. Pellentesque at turpis vel augue scelerisque malesuada at sit amet augue.',
@@ -361,10 +159,10 @@ export default {
             category: '2020',
           },
           {
-            id: 19,
+            id: 3,
             slug: 'ciao16',
             src: this.mapFiles(require.context('@/assets/projects/folder-02/', true, /\.(png|gif|ico|jpg|jpeg)$/)),
-            title: '@praizist Twitter',
+            title: 'Test',
             subtitle: 'Unsplash',
             date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
             description: 'Duis fringilla mauris ac pellentesque suscipit. Vestibulum in feugiat felis. Cras eget mattis lectus, sit amet ultricies leo. Donec imperdiet diam eu lectus scelerisque accumsan. Quisque sollicitudin, diam non eleifend tempor, tortor tortor pulvinar enim, sit amet maximus neque metus ac nulla. Morbi pellentesque leo ut nulla scelerisque pulvinar. In hac habitasse platea dictumst. Donec scelerisque ante ante, vel tempor dolor auctor ut. Sed et luctus leo, eu egestas sapien. In semper commodo urna, id lacinia mi pretium eu. Suspendisse ornare blandit ligula id fermentum. Nulla lobortis, ligula quis consequat elementum, elit odio fringilla ligula, commodo tristique leo elit ac ex. Vestibulum semper sagittis odio sed aliquam. Pellentesque at turpis vel augue scelerisque malesuada at sit amet augue.',
@@ -372,11 +170,33 @@ export default {
             category: '2021',
           },
           {
-            id: 20,
+            id: 4,
             slug: 'ciao16',
             src: this.mapFiles(require.context('@/assets/projects/folder-03/', true, /\.(png|gif|ico|jpg|jpeg)$/)),
-            title: '@praizist Twitter',
+            title: 'Template',
             subtitle: 'Unsplash',
+            date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
+            description: 'Duis fringilla mauris ac pellentesque suscipit. Vestibulum in feugiat felis. Cras eget mattis lectus, sit amet ultricies leo. Donec imperdiet diam eu lectus scelerisque accumsan. Quisque sollicitudin, diam non eleifend tempor, tortor tortor pulvinar enim, sit amet maximus neque metus ac nulla. Morbi pellentesque leo ut nulla scelerisque pulvinar. In hac habitasse platea dictumst. Donec scelerisque ante ante, vel tempor dolor auctor ut. Sed et luctus leo, eu egestas sapien. In semper commodo urna, id lacinia mi pretium eu. Suspendisse ornare blandit ligula id fermentum. Nulla lobortis, ligula quis consequat elementum, elit odio fringilla ligula, commodo tristique leo elit ac ex. Vestibulum semper sagittis odio sed aliquam. Pellentesque at turpis vel augue scelerisque malesuada at sit amet augue.',
+            tags: ['tag', 'tag', 'tag'],
+            category: '2021',
+          },
+          {
+            id: 5,
+            slug: 'prova-00',
+            src: this.mapFiles(require.context('@/assets/projects/prova-00/', true, /\.(png|gif|ico|jpg|jpeg)$/)),
+            title: 'Prova',
+            subtitle: 'Random',
+            date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
+            description: 'Duis fringilla mauris ac pellentesque suscipit. Vestibulum in feugiat felis. Cras eget mattis lectus, sit amet ultricies leo. Donec imperdiet diam eu lectus scelerisque accumsan. Quisque sollicitudin, diam non eleifend tempor, tortor tortor pulvinar enim, sit amet maximus neque metus ac nulla. Morbi pellentesque leo ut nulla scelerisque pulvinar. In hac habitasse platea dictumst. Donec scelerisque ante ante, vel tempor dolor auctor ut. Sed et luctus leo, eu egestas sapien. In semper commodo urna, id lacinia mi pretium eu. Suspendisse ornare blandit ligula id fermentum. Nulla lobortis, ligula quis consequat elementum, elit odio fringilla ligula, commodo tristique leo elit ac ex. Vestibulum semper sagittis odio sed aliquam. Pellentesque at turpis vel augue scelerisque malesuada at sit amet augue.',
+            tags: ['tag', 'tag', 'tag'],
+            category: '2021',
+          },
+          {
+            id: 6,
+            slug: 'prova-01',
+            src: this.mapFiles(require.context('@/assets/projects/', false, /\.(png|gif|ico|jpg|jpeg)$/)),
+            title: 'Projects',
+            subtitle: 'Folder',
             date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
             description: 'Duis fringilla mauris ac pellentesque suscipit. Vestibulum in feugiat felis. Cras eget mattis lectus, sit amet ultricies leo. Donec imperdiet diam eu lectus scelerisque accumsan. Quisque sollicitudin, diam non eleifend tempor, tortor tortor pulvinar enim, sit amet maximus neque metus ac nulla. Morbi pellentesque leo ut nulla scelerisque pulvinar. In hac habitasse platea dictumst. Donec scelerisque ante ante, vel tempor dolor auctor ut. Sed et luctus leo, eu egestas sapien. In semper commodo urna, id lacinia mi pretium eu. Suspendisse ornare blandit ligula id fermentum. Nulla lobortis, ligula quis consequat elementum, elit odio fringilla ligula, commodo tristique leo elit ac ex. Vestibulum semper sagittis odio sed aliquam. Pellentesque at turpis vel augue scelerisque malesuada at sit amet augue.',
             tags: ['tag', 'tag', 'tag'],

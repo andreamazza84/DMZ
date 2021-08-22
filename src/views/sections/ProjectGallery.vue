@@ -17,7 +17,7 @@
       </v-tabs>
     </div> -->
     <v-row
-      justify="center"
+      justify="start"
       align="center"
       no-gutters
     >
@@ -43,14 +43,14 @@
     name: 'SectionProjectGallery',
     data () {
       return {
-        selectedTab: 'all',
-        tabs: [
-          { title: 'Tutti', category: 'all' },
-          { title: '2021', category: '2021' },
-          { title: '2020', category: '2020' },
-          { title: '2019', category: '2019' },
-          { title: '2018', category: '2018' },
-        ],
+      //   selectedTab: 'all',
+      //   tabs: [
+      //     { title: 'Tutti', category: 'all' },
+      //     { title: '2021', category: '2021' },
+      //     { title: '2020', category: '2020' },
+      //     { title: '2019', category: '2019' },
+      //     { title: '2018', category: '2018' },
+      //   ],
       }
     },
     computed: {
