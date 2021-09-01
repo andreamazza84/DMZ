@@ -2,6 +2,7 @@
 node_modules
 /dist
 /scripts
+/backoffice
 
 # local env files
 .env.local

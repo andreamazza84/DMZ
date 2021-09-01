@@ -65,6 +65,10 @@
           space="2"
           :text="activeProject.date"
         />
+        <base-body
+          space="2"
+          :text="collection"
+        />
         <base-subtitle
           title="Description"
           weight="bold"
@@ -83,18 +87,6 @@
             :text="tag"
           />
         </template>
-        <div />
-        <!-- <base-btn
-          class="mt-10 elevation-0 mx-1"
-          color="black"
-          dark
-          depressed
-        >
-          <span
-            class="font-weight-black text-none"
-            v-text="'Order Work'"
-          />
-        </base-btn> -->
       </v-col>
     </v-row>
   </base-section>
@@ -134,6 +126,9 @@
       },
       wideScreen () {
         return this.$vuetify.breakpoint.name !== 'xs'
+      },
+      collection () {
+        return this.$store.state.collection
       },
     },
     mounted () {

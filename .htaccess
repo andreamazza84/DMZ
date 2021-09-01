@@ -1,0 +1,14 @@
+RewriteEngine on
+RewriteBase /
+
+#per il refresh della pagina su url interno
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^(.*) /index.html [NC,L]
+
+# Redirect to HTTPS
+ RewriteCond %{HTTPS} off
+ RewriteCond %{HTTP:X-Forwarded-Proto} !https
+ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

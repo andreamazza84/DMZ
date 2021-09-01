@@ -6,6 +6,6 @@ module.exports = {
     'vuetify',
   ],
   outputDir: 'docs',
-
-  publicPath: process.env.NODE_ENV === 'production' ? '/DMZ' : '/',
+  // publicPath: process.env.NODE_ENV === 'production' ? '/' : '/DMZ', GIT
+  publicPath: process.env.NODE_ENV === 'production' ? '/' : '/DMZ',
 }
