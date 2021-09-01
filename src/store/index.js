@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import axios from 'axios'
 import Vuex from 'vuex'
 import appData from '../mixins/app-data'
 
@@ -10,6 +11,8 @@ export default new Vuex.Store({
     count: 0,
     length: 0,
     index: 0,
+    collection: null,
+    immagine: null,
   },
   mutations: {
     increment (state) {
@@ -38,6 +41,13 @@ export default new Vuex.Store({
       // console.log('index', index)
       state.count = index
     },
+    setCollection (state, collection) {
+      console.log('collection', collection)
+      state.collection = collection
+    },
+    setImage (state, immagine) {
+      state.immagine = immagine
+    },
   },
   actions: {
     // setActiveProject ({ commit }, id) {
@@ -54,6 +64,24 @@ export default new Vuex.Store({
     },
     setCounter ({ commit }, index) {
       return commit('setCounter', index)
+    },
+    retrieveData ({ commit }, item) {
+      const response = new Promise((resolve, reject) => {
+        try {
+          const { data } = axios.get(`/wp/v2/${item}`)
+          if (item === 'collection') {
+            // console.log(this)
+            return commit('setCollection', data)
+          }
+          if (item === 'immagine') {
+            return commit('setImage', data)
+          }
+          resolve(data)
+        } catch (err) {
+          reject(err)
+        }
+      })
+      console.log(response)
     },
   },
 })

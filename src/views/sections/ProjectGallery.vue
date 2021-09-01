@@ -3,7 +3,7 @@
     id="gallery"
     space="0"
   >
-    <div class="justify-center align-center">
+    <!-- <div class="justify-center align-center">
       <v-tabs
         v-model="selectedTab"
         centered
@@ -15,9 +15,9 @@
           v-text="tab.title"
         />
       </v-tabs>
-    </div>
+    </div> -->
     <v-row
-      justify="center"
+      justify="start"
       align="center"
       no-gutters
     >
@@ -43,23 +43,24 @@
     name: 'SectionProjectGallery',
     data () {
       return {
-        selectedTab: 'all',
-        tabs: [
-          { title: 'Tutti', category: 'all' },
-          { title: '2021', category: '2021' },
-          { title: '2020', category: '2020' },
-          { title: '2019', category: '2019' },
-          { title: '2018', category: '2018' },
-        ],
+      //   selectedTab: 'all',
+      //   tabs: [
+      //     { title: 'Tutti', category: 'all' },
+      //     { title: '2021', category: '2021' },
+      //     { title: '2020', category: '2020' },
+      //     { title: '2019', category: '2019' },
+      //     { title: '2018', category: '2018' },
+      //   ],
       }
     },
     computed: {
       visibleProjects () {
-        return this.appData.projects.filter(project => {
-          if (this.selectedTab.toLowerCase() === 'all') return true
+        return this.appData.projects
+        // .filter(project => {
+        //   if (this.selectedTab.toLowerCase() === 'all') return true
 
-          return project.category.toLowerCase() === this.selectedTab.toLowerCase()
-        })
+        //   return project.category.toLowerCase() === this.selectedTab.toLowerCase()
+        // })
       },
     },
   }

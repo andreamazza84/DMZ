@@ -1,29 +1,36 @@
 <template>
   <v-app-bar
     app
-    elevate-on-scroll
+    hide-on-scroll
     style="right: 0"
     :color="color || 'white'"
-    :height="$vuetify.breakpoint.mdAndUp ? '100px' : '60px'"
-    class="px-12"
+    class="px-6"
+    height="100px"
   >
-    <!-- <v-img
-      class="hidden-sm-and-down"
-      :max-width="$vuetify.breakpoint.mdAndUp ? '200px' : '100px'"
-      max-height="120px"
-      min-height="120px"
-      :src="require('@/assets/campfire.svg')"
-    /> -->
-    <v-toolbar-title class="text-h5 title-effect">
+    <v-toolbar-title class="text-h5 title-container">
       <router-link
+        class="link"
         :to="{ name: 'Portfolio' }"
-        tag="h4"
+        :tag="$vuetify.breakpoint.mdAndUp ? 'h2' : 'h3'"
         style="cursor: pointer"
-        v-text="appData.title"
+        v-html="appData.title1"
+      />
+      <router-link
+        class="link"
+        :to="{ name: 'Portfolio' }"
+        :tag="$vuetify.breakpoint.mdAndUp ? 'h2' : 'h3'"
+        style="cursor: pointer"
+        v-html="appData.title2"
+      />
+      <router-link
+        class="link"
+        :to="{ name: 'Portfolio' }"
+        :tag="$vuetify.breakpoint.mdAndUp ? 'h2' : 'h3'"
+        style="cursor: pointer"
+        v-html="appData.title3"
       />
     </v-toolbar-title>
     <v-spacer />
-    <!-- <div v-if="$vuetify.breakpoint.mdAndUp"> -->
     <div>
       <v-tabs
         hide-slider
@@ -114,14 +121,28 @@
     },
   }
 </script>
-<style lang="scss" scoped>
-// @import '../../styles/variables.scss';
+<style lang="scss">
+  .title-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
   .title-effect{
     &{
+      font-family: 'Monoton';
+      // letter-spacing: 2px;
       transition: all 300ms;
     }
     &:hover{
-      color: #6c99d1;
+      color: #ffffff !important;
     }
+  }
+  .v-toolbar__content{
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .link{
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
   }
 </style>

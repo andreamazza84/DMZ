@@ -3,38 +3,35 @@
     <v-theme-provider dark>
       <v-row
         no-gutters
-        class="px-12"
+        class="px-3"
         align="start"
         justify="space-between"
       >
         <!-- About -->
         <v-col
           cols="12"
-          lg="4"
-          md="12"
-          sm="12"
           class="px-3 py-3"
         >
           <base-subheading title="Davide Mancini Zanchi" />
-          <base-divider
+          <!-- <base-divider
             color="white"
             align="left"
-          />
-          <base-body text="Nato a Fermignano il 28 Luglio 1986, è uno degli artisti più fighi del cosmo." />
-          <base-body text="Citazione preferita: 'Arcordate che i ladre inchiava la mechina'" />
+          /> -->
+          <!-- <base-body text="Nato a Fermignano il 28 Luglio 1986, è uno degli artisti più fighi del cosmo." /> -->
+          <!-- <base-body text="Citazione preferita: 'Arcordate che i ladre inchiava la mechina'" /> -->
         </v-col>
 
         <!-- Contatti -->
         <v-col
           cols="12"
-          lg="4"
+          lg="6"
           md="6"
           sm="12"
           class="px-3 py-3"
         >
           <base-subheading title="Contatti" />
           <base-divider
-            color="white"
+            color="primary"
             align="left"
           />
           <base-subtitle
@@ -66,14 +63,14 @@
         <!-- Social -->
         <v-col
           cols="12"
-          lg="4"
+          lg="6"
           md="6"
           sm="12"
           class="px-3 py-3"
         >
           <base-subheading title="Social" />
           <base-divider
-            color="white"
+            color="primary"
             align="left"
           />
           <base-btn
@@ -101,5 +98,9 @@
 </script>
 
 <style lang="scss" scoped>
-
+  .offblack{
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    background-color: #1e1e1e !important;
+  }
 </style>

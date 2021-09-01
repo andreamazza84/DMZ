@@ -6,6 +6,7 @@ WebFontLoader.load({
     families: [
       'Open+Sans:100,300,400,500,700,900&display=swap',
       'Cairo:100,300,400,500,700,900&display=swap',
+      'Monoton&display=swap',
     ],
   },
 })
