@@ -49,6 +49,9 @@
         cols="12"
         class="px-5 py-2"
       >
+        <!-- prova -->
+        <div class="prova" v-html="collection"></div>
+        <!-- /prova -->
         <base-heading
           class="font-weight-bold mt-4"
           :title="activeProject.title"
@@ -64,10 +67,6 @@
         <base-body
           space="2"
           :text="activeProject.date"
-        />
-        <base-body
-          space="2"
-          :text="collection"
         />
         <base-subtitle
           title="Description"
@@ -128,15 +127,12 @@
         return this.$vuetify.breakpoint.name !== 'xs'
       },
       collection () {
-        return this.$store.state.collection
+        return this.$store.state.raccolta[0].content.rendered
       },
     },
     mounted () {
       this.$store.dispatch('setArrayLength', this.gallery.length)
+      // this.$store.dispatch('retrieveData', 'raccolta')
     },
   }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

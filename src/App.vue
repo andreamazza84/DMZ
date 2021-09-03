@@ -6,17 +6,13 @@
   export default {
     name: 'App',
     mounted () {
+      this.retrieveData('raccolta')
       this.retrieveData('immagine')
-      this.retrieveData('collection')
     },
     methods: {
-      async retrieveData (item) {
-        try {
-          await this.$store.dispatch('retrieveData', item)
-        } catch (error) {
-          console.log('Error', error)
-        }
-      },
+      retrieveData: function (item) {
+        return this.$store.dispatch('retrieveData', item)
+      }
     },
   }
 </script>

@@ -1,7 +1,7 @@
 import Vue from 'vue'
-import axios from 'axios'
 import Vuex from 'vuex'
-import appData from '../mixins/app-data'
+import axios from 'axios'
+import appData from '@/mixins/app-data'
 
 Vue.use(Vuex)
 
@@ -11,8 +11,8 @@ export default new Vuex.Store({
     count: 0,
     length: 0,
     index: 0,
-    collection: null,
-    immagine: null,
+    raccolta: [],
+    immagine: [],
   },
   mutations: {
     increment (state) {
@@ -38,15 +38,15 @@ export default new Vuex.Store({
       state.length = length
     },
     setCounter (state, index) {
-      // console.log('index', index)
+      console.log('index', index)
       state.count = index
     },
-    setCollection (state, collection) {
-      console.log('collection', collection)
-      state.collection = collection
+    setCollection (state, data) {
+      console.log('raccolta', data)
+      state.raccolta = data
     },
-    setImage (state, immagine) {
-      state.immagine = immagine
+    setImage (state, item) {
+      state.immagine = item
     },
   },
   actions: {
@@ -66,22 +66,20 @@ export default new Vuex.Store({
       return commit('setCounter', index)
     },
     retrieveData ({ commit }, item) {
-      const response = new Promise((resolve, reject) => {
+      return new Promise(async (resolve, reject) => {
         try {
-          const { data } = axios.get(`/wp/v2/${item}`)
-          if (item === 'collection') {
-            // console.log(this)
-            return commit('setCollection', data)
-          }
+          const { data } = await axios.get(`/wp/v2/${item}`)
+          if (item === 'raccolta') {
+              return commit('setCollection', data)
+          } 
           if (item === 'immagine') {
-            return commit('setImage', data)
+              return commit('setImage', data)
           }
           resolve(data)
         } catch (err) {
           reject(err)
         }
       })
-      console.log(response)
     },
   },
 })
