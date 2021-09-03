@@ -14,7 +14,7 @@
       >
         <carousel
           :height="$vuetify.breakpoint.mdAndUp ? 'calc(100vh - 100px)' : 'calc(100vh - 60px)'"
-          :src="currentGallery"
+          :src="galleria.immagini"
         />
       </v-col>
     </v-row>
@@ -23,7 +23,7 @@
       align="center"
       no-gutters
     >
-      <template v-for="(project, i) in currentGallery">
+      <template v-for="(project, i) in galleria.immagini">
         <v-col
           :key="i"
           cols="12"
@@ -51,11 +51,11 @@
       >
         <base-heading
           class="font-weight-bold mt-4"
-          :title="activeProject.title"
+          :title="galleria.titolo"
           align="left"
         />
         <base-subheading
-          :title="activeProject.subtitle"
+          :title="galleria.sottotitolo"
         />
         <base-subtitle
           title="Date"
@@ -63,26 +63,26 @@
         />
         <base-body
           space="2"
-          :text="activeProject.date"
+          :text="galleria.data"
         />
         <base-subtitle
           title="Description"
           weight="bold"
         />
         <base-body
-          :text="activeProject.description"
+          :html="galleria.descrizione"
           space="3"
         />
-        <base-subtitle
+        <!-- <base-subtitle
           title="Tags"
           weight="bold"
-        />
-        <template v-for="(tag, i) in activeProject.tags">
+        /> -->
+        <!-- <template v-for="(tag, i) in galleria.tags">
           <base-tag
             :key="i"
             :text="tag"
           />
-        </template>
+        </template> -->
       </v-col>
     </v-row>
   </base-section>
@@ -97,38 +97,40 @@
     },
     data () {
       return {
-        activeProject: {
-          title: 'title',
-          subtitle: 'subtitle',
-          description: 'description',
-          tags: 'tags',
-          date: 'date',
-        },
-        raccolta: {},
       }
     },
     computed: {
       wideScreen () {
         return this.$vuetify.breakpoint.name !== 'xs'
       },
-      currentGallery () {
-        const galleria = []
+      galleria () {
+        let galleria = {}
         const slug = this.$route.params.slug
         const proj = this.$store.state.raccolta.find(prj => {
           return prj.slug === slug 
         })
+        // Informazioni sull'album
+        // console.log(proj)
+        galleria['data'] = proj.date
+        galleria['titolo'] = proj.title.rendered
+        galleria['didascalia'] = proj.acf.didascalia
+        galleria['sottotitolo'] = proj.acf.sottotitolo
+        galleria['descrizione'] = proj.content.rendered
+
+        // Immagini
+        const immagini = []
         for (const key in proj.acf) {
-          console.log(key, proj.acf[key])
-          if (key.includes('foto')) {
-            galleria.push(proj.acf[key].url)
+          if (!!proj.acf[key] && key.includes('immagine_') || !!proj.acf[key] && key.includes('foto-')) {
+            // console.log(key, !!proj.acf[key])
+            immagini.push(proj.acf[key].url)
           }
-          console.log('galleria', galleria)
-        }  
+        }
+        galleria['immagini'] = immagini  
         return galleria
       }
     },
     mounted () {
-      this.$store.dispatch('setArrayLength', this.currentGallery.length)
+      this.$store.dispatch('setArrayLength', this.galleria.immagini.length)
     },
   }
 </script>

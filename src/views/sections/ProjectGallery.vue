@@ -32,7 +32,7 @@
     computed: {
       visibleProjects () {
         const visibleProjects = this.$store.state.raccolta
-        console.log('visibleProjects', visibleProjects)
+        // console.log('visibleProjects', visibleProjects)
         return visibleProjects
       },
 

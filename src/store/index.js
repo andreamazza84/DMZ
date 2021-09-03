@@ -43,7 +43,7 @@ export default new Vuex.Store({
       state.count = index
     },
     setCollection (state, data) {
-      console.log('raccolta', data)
+      // console.log('raccolta', data)
       state.raccolta = data
     },
     setImage (state, data) {
