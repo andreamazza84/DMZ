@@ -13,6 +13,7 @@ export default new Vuex.Store({
     index: 0,
     raccolta: [],
     immagine: [],
+    currentGallery: [],
   },
   mutations: {
     increment (state) {
@@ -38,15 +39,16 @@ export default new Vuex.Store({
       state.length = length
     },
     setCounter (state, index) {
-      console.log('index', index)
+      // console.log('index', index)
       state.count = index
     },
     setCollection (state, data) {
       console.log('raccolta', data)
       state.raccolta = data
     },
-    setImage (state, item) {
-      state.immagine = item
+    setImage (state, data) {
+      // console.log('immagine', data)
+      state.immagine = data
     },
   },
   actions: {
@@ -65,21 +67,31 @@ export default new Vuex.Store({
     setCounter ({ commit }, index) {
       return commit('setCounter', index)
     },
-    retrieveData ({ commit }, item) {
-      return new Promise(async (resolve, reject) => {
-        try {
-          const { data } = await axios.get(`/wp/v2/${item}`)
-          if (item === 'raccolta') {
-              return commit('setCollection', data)
-          } 
-          if (item === 'immagine') {
-              return commit('setImage', data)
-          }
-          resolve(data)
-        } catch (err) {
-          reject(err)
+    retrieveData({ commit }, item){
+      return new Promise(async (resolve, reject) =>{
+        try{
+          const { data } = await axios.get(`/wp/v2/${item}`);
+          if(item === "raccolta"){ return commit('setCollection', data) }
+          if(item === "immagine"){ return commit('setImage', data) }
+          resolve(data);
+        } catch(error) {
+          reject(error);
         }
-      })
+      });
     },
+    // retrieveData ({ commit }, item) {
+    //   axios.get(`/wp/v2/${item}`)
+    //   .then( data => {
+    //     if (item === 'raccolta') {
+    //       return commit('setCollection', data)
+    //     } 
+    //     if (item === 'immagine') {
+    //       return commit('setImage', data)
+    //     }
+    //   })
+    //   .catch(e => {
+    //     console.log(e)
+    //   })
+    // },
   },
 })

@@ -3,19 +3,6 @@
     id="gallery"
     space="0"
   >
-    <!-- <div class="justify-center align-center">
-      <v-tabs
-        v-model="selectedTab"
-        centered
-      >
-        <v-tab
-          v-for="tab in tabs"
-          :key="tab.category"
-          :href="`#${tab.category.toLowerCase()}`"
-          v-text="tab.title"
-        />
-      </v-tabs>
-    </div> -->
     <v-row
       justify="start"
       align="center"
@@ -31,6 +18,7 @@
         >
           <base-project
             v-bind="project"
+            :src="project.acf.immagine_di_copertina"
           />
         </v-col>
       </template>
@@ -41,27 +29,13 @@
 <script>
   export default {
     name: 'SectionProjectGallery',
-    data () {
-      return {
-      //   selectedTab: 'all',
-      //   tabs: [
-      //     { title: 'Tutti', category: 'all' },
-      //     { title: '2021', category: '2021' },
-      //     { title: '2020', category: '2020' },
-      //     { title: '2019', category: '2019' },
-      //     { title: '2018', category: '2018' },
-      //   ],
-      }
-    },
     computed: {
       visibleProjects () {
-        return this.appData.projects
-        // .filter(project => {
-        //   if (this.selectedTab.toLowerCase() === 'all') return true
-
-        //   return project.category.toLowerCase() === this.selectedTab.toLowerCase()
-        // })
+        const visibleProjects = this.$store.state.raccolta
+        console.log('visibleProjects', visibleProjects)
+        return visibleProjects
       },
+
     },
   }
 </script>

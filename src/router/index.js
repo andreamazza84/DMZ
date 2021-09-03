@@ -10,7 +10,6 @@ const router = new Router({
   scrollBehavior: (to, from, savedPosition) => {
     if (to.hash) return { selector: to.hash }
     if (savedPosition) return savedPosition
-
     return { x: 0, y: 0 }
   },
   routes: [
@@ -34,13 +33,13 @@ const router = new Router({
         //   component: () => import('@/views/services/Index.vue'),
         // },
         {
-          path: '',
+          path: '/',
           name: 'Portfolio',
           component: () => import('@/views/portfolio/Index.vue'),
         },
         {
-          path: 'portfolio/:id',
-          name: 'ProjectDetail',
+          path: '/:slug',
+          name: 'ProjectDetailWp',
           props: true,
           component: () => import('@/views/portfolio/Detail.vue'),
         },
@@ -59,11 +58,11 @@ const router = new Router({
         //   name: 'Sink',
         //   component: () => import('@/views/sink/Index.vue'),
         // },
-        // {
-        //   path: '*',
-        //   name: 'NotFound',
-        //   component: () => import('@/views/not-found/Index.vue'),
-        // },
+        {
+          path: '*',
+          name: 'NotFound',
+          component: () => import('@/views/not-found/Index.vue'),
+        },
       ],
     },
   ],

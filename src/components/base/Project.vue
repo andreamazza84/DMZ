@@ -12,7 +12,7 @@
         min-height="300"
         max-height="300"
         fill
-        :src="src[0]"
+        :src="src.url"
       >
         <v-fade-transition>
           <div
@@ -26,7 +26,7 @@
               align="center"
             >
               <v-btn
-                :to="{ name: 'ProjectDetail', params: { id } }"
+                :to="{ name: 'ProjectDetailWp', params: { slug } }"
                 class="mx-2 mb-2"
                 icon
                 dark
@@ -40,12 +40,12 @@
               </v-btn>
               <div
                 class="font-weight-black mb-2 text-left"
-                v-text="title"
+                v-text="title.rendered"
               />
-              <div
+              <!-- <div
                 class="mb-2 text-left"
                 v-text="subtitle"
-              />
+              /> -->
             </v-row>
           </div>
         </v-fade-transition>
@@ -59,9 +59,9 @@
     name: 'BaseProject',
 
     props: {
-      id: [String, Number],
+      slug: [String, Number],
       title: {
-        type: String,
+        type: Object,
         required: true,
       },
       subtitle: String,
