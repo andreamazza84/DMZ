@@ -12,7 +12,8 @@
       <v-col
         cols="12"
       >
-        <carousel
+        <BottomSheet />
+        <Carousel
           :height="$vuetify.breakpoint.mdAndUp ? 'calc(100vh - 100px)' : 'calc(100vh - 60px)'"
           :src="galleria.immagini"
         />
@@ -33,7 +34,7 @@
         >
           <base-project-alt
             class="my-2 mx-1"
-            :src="project"
+            :src="project.src"
             :active="i === $store.state.count"
             :index="i"
           />
@@ -58,7 +59,7 @@
           :title="galleria.sottotitolo"
         />
         <base-subtitle
-          title="Date"
+          title="Data"
           weight="bold"
         />
         <base-body
@@ -66,11 +67,11 @@
           :text="galleria.data"
         />
         <base-subtitle
-          title="Description"
+          title="Descrizione"
           weight="bold"
         />
         <base-body
-          :html="galleria.descrizione"
+          :text="galleria.descrizione"
           space="3"
         />
         <!-- <base-subtitle
@@ -90,10 +91,13 @@
 
 <script>
   import Carousel from '@/components/base/Carousel.vue'
+  import BottomSheet from '@/components/base/BottomSheet'
+
   export default {
     name: 'SectionProjectDetail',
     components: {
       Carousel,
+      BottomSheet
     },
     data () {
       return {
@@ -111,18 +115,30 @@
         })
         // Informazioni sull'album
         // console.log(proj)
+        galleria['id'] = proj.id
+        galleria['slug'] = proj.slug
         galleria['data'] = proj.date
         galleria['titolo'] = proj.title.rendered
-        galleria['didascalia'] = proj.acf.didascalia
         galleria['sottotitolo'] = proj.acf.sottotitolo
-        galleria['descrizione'] = proj.content.rendered
+        galleria['didascalia'] = proj.acf.didascalia
+        galleria['descrizione'] = proj.acf.descrizione
 
         // Immagini
         const immagini = []
         for (const key in proj.acf) {
-          if (!!proj.acf[key] && key.includes('immagine_') || !!proj.acf[key] && key.includes('foto-')) {
-            // console.log(key, !!proj.acf[key])
-            immagini.push(proj.acf[key].url)
+
+          if (!!proj?.acf[key]) {
+            if (key.includes('immagine_') || key.includes('foto-')) {
+              // console.log(key, !!proj.acf[key])
+              immagini.push({
+                id: proj.acf[key].id,
+                src: proj.acf[key].url,
+                titolo: proj.acf[key].title,
+                autore: proj.acf[key].author,
+                didascalia: proj.acf[key].caption,
+                descrizione: proj.acf[key].description
+              })
+            }
           }
         }
         galleria['immagini'] = immagini  
