@@ -4,6 +4,7 @@ node_modules
 /dist
 /scripts
 /backoffice
+/backupWPaltervista
 
 # local env files
 .env.local
